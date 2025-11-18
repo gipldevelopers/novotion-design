@@ -185,7 +185,7 @@
 //             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed">
 //               Strategic RPO for the UK & USA. We build the high-performance teams you need, while you focus on building your business.
 //             </p>
-//             <Link href="/contact">
+//             <Link href="/contact#contact-form">
 //               <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
 //                 Schedule Your RPO Consultation <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
 //               </Button>
@@ -372,7 +372,7 @@
 //           <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-3xl mx-auto text-blue-100">
 //             If your organization in the UK or USA is facing hiring delays, high agency fees, or the challenge of scaling, RPO could be the strategic shift you need. The first step is a simple, no-obligation conversation.
 //           </p>
-//           <Link href="/contact">
+//           <Link href="/contact#contact-form">
 //             <Button size="lg" variant="secondary" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
 //               Schedule Your Consultation
 //             </Button>
@@ -604,7 +604,7 @@
 //           </p>
 
 //           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-4 sm:pt-6">
-//             <Link href="/contact" className="w-full sm:w-auto">
+//             <Link href="/contact#contact-form" className="w-full sm:w-auto">
 //               <Button 
 //                 size="lg" 
 //                 className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl shadow-lg transition-transform hover:scale-105"
@@ -805,7 +805,7 @@
 //           <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-3xl mx-auto text-blue-100">
 //             If your organization in the UK or USA is facing hiring delays, high agency fees, or the challenge of scaling, RPO could be the strategic shift you need.
 //           </p>
-//           <Link href="/contact">
+//           <Link href="/contact#contact-form">
 //             <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-white text-cyan-600 hover:bg-gray-100 rounded-xl">
 //               Schedule Your Consultation
 //             </Button>
@@ -944,12 +944,12 @@ const ServicesRPO = () => {
     { 
       icon: TrendingUp, 
       title: 'Instant Scalability', 
-      description: 'Scale your talent acquisition efforts up or down instantly. We adjust our recruitment resources to fit your exact needs—without hiring or firing internal recruiters.' 
+      description: 'Scale your talent acquisition efforts up or down instantly. We adjust our recruitment resources to fit your exact needs - without hiring or firing internal recruiters.' 
     },
     { 
       icon: Zap, 
       title: 'Access to Expertise & Technology', 
-      description: 'Get immediate access to sourcing specialists, compliance experts, and advanced AI-powered recruitment tools—all managed through our RPO services.' 
+      description: 'Get immediate access to sourcing specialists, compliance experts, and advanced AI-powered recruitment tools - all managed through our RPO services.' 
     },
     { 
       icon: Users, 
@@ -961,7 +961,7 @@ const ServicesRPO = () => {
   const services = [
     {
       title: 'Full RPO Partnership',
-      description: 'Our most comprehensive recruitment solution. We become your dedicated, full-service hiring department—managing the entire talent acquisition lifecycle from sourcing to onboarding.',
+      description: 'Our most comprehensive recruitment solution. We become your dedicated, full-service hiring department - managing the entire talent acquisition lifecycle from sourcing to onboarding.',
       features: [
         'End-to-end recruitment process management',
         'Dedicated RPO account team',
@@ -973,7 +973,7 @@ const ServicesRPO = () => {
     },
     {
       title: 'Recruitment On-Demand (Project RPO)',
-      description: 'Need to ramp up hiring for a specific project, product launch, or seasonal demand? We deliver a high-performance recruitment team for the duration you need.',
+      description: 'Need to ramp up hiring for a specific project, product launch, or seasonal demand? We deliver a high-performance recruitment team for the duration you need, ensuring speed, precision, and seamless execution.',
       features: [
         'Flexible, short-term RPO engagement',
         'Dedicated project recruitment team',
@@ -1006,7 +1006,7 @@ const ServicesRPO = () => {
     },
     {
       title: 'Candidate Pre-Screening & Coaching',
-      description: 'Professional resume optimization and candidate coaching to ensure your prospects present their best selves in the hiring process.',
+      description: 'Professional resume optimization and candidate coaching to ensure your prospects present their best selves in the hiring process, leading to stronger and more confident hiring outcomes.',
       features: [
         'Resume and profile enhancement for talent',
         'Interview coaching and preparation support',
@@ -1053,7 +1053,7 @@ const ServicesRPO = () => {
   const faqs = [
     {
       question: 'What exactly does RPO include?',
-      answer: 'RPO includes end-to-end recruitment support—from sourcing and screening to interviewing, onboarding, and reporting. We act as an extension of your internal hiring team to manage the entire talent acquisition process.'
+      answer: 'RPO includes end-to-end recruitment support - from sourcing and screening to interviewing, onboarding, and reporting. We act as an extension of your internal hiring team to manage the entire talent acquisition process.'
     },
     {
       question: 'How is RPO different from traditional recruitment or agencies?',
@@ -1065,15 +1065,15 @@ const ServicesRPO = () => {
     },
     {
       question: 'Can I use RPO only for short-term or project-based hiring?',
-      answer: 'Yes. Our Recruitment On-Demand model lets you scale hiring for specific projects, seasonal needs, or rapid expansions without long-term commitments.'
+      answer: 'Yes. Our Recruitment On-Demand model lets you scale hiring for specific projects, flexible needs, or rapid expansions without long-term commitments.'
     },
     {
       question: 'What size companies benefit from RPO?',
-      answer: 'RPO works for startups, growing mid-size companies, and large enterprises—any organization seeking faster hiring, reduced cost, and a more efficient talent acquisition engine.'
+      answer: 'RPO works for startups, growing mid-size companies, and large enterprises - any organization seeking faster hiring, reduced cost, and a more efficient talent acquisition engine.'
     },
     {
       question: 'How quickly can you start?',
-      answer: 'We typically deploy recruitment resources within 1–2 weeks after aligning on scope, goals, and integration requirements.'
+      answer: 'We typically deploy recruitment resources within 1-2 weeks after aligning on scope, goals, and integration requirements.'
     }
   ];
 
@@ -1103,9 +1103,9 @@ const ServicesRPO = () => {
 
         <div className="relative container mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-8 z-10">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 sm:px-6 sm:py-3 mb-6 sm:mb-8">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></div>
+            {/* <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></div> */}
             <span className="text-white/90 text-xs sm:text-sm font-medium">
-              RPO — Strategic Recruitment for UK & USA
+              RPO - Strategic Recruitment for UK & USA
             </span>
           </div>
 
@@ -1120,7 +1120,7 @@ const ServicesRPO = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-4 sm:pt-6">
-            <Link href="/contact" className="w-full sm:w-auto">
+            <Link href="/contact#contact-form" className="w-full sm:w-auto">
               <Button 
                 size="lg" 
                 className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl shadow-lg transition-transform hover:scale-105"
@@ -1129,14 +1129,14 @@ const ServicesRPO = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Button 
+            {/* <Button 
               size="lg" 
               variant="outline"
               className="group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl transition-all"
             >
               Download Our RPO Guide
               <Download className="ml-2 h-4 w-4" />
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
@@ -1174,10 +1174,10 @@ const ServicesRPO = () => {
             </div>
             <div className="space-y-4 sm:space-y-6 text-gray-600">
               <p className="text-base sm:text-lg leading-relaxed">
-                Let's be honest: for many growing companies, traditional recruitment is a bottleneck that drains resources and slows growth.
+                In today’s fast-moving market, traditional recruitment has become a major barrier to efficient growth. 
               </p>
               <p className="text-base sm:text-lg leading-relaxed">
-                It's reactive. It's expensive. And it pulls your key leaders away from what they do best—growing the business instead of managing the hiring process.
+                It's reactive. It's expensive. And it pulls your key leaders away from what they do best - growing the business instead of managing the hiring process.
               </p>
               <p className="text-base sm:text-lg leading-relaxed">
                 You're stuck in a cycle of paying hefty agency fees for one-off hires, with no long-term talent acquisition strategy or scalability. Sound familiar?
@@ -1200,13 +1200,13 @@ const ServicesRPO = () => {
             </div>
             <div className="space-y-4 sm:space-y-6 text-gray-600">
               <p className="text-base sm:text-lg leading-relaxed">
-                Recruitment Process Outsourcing (RPO) isn't just "outsourcing" your hiring—it's a strategic partnership that transforms how you attract, engage, and onboard top talent through comprehensive talent acquisition.
+                Recruitment Process Outsourcing (RPO) isn't just "outsourcing" your hiring - it's a strategic partnership that transforms how you attract, engage, and onboard top talent through comprehensive talent acquisition.
               </p>
               <p className="text-base sm:text-lg leading-relaxed">
-                We embed a dedicated team of recruitment experts directly into your organization. We become a seamless extension of your Talent Acquisition team—learning your culture, adopting your brand, and managing your entire recruitment process from start to finish.
+                We embed a dedicated team of recruitment experts directly into your organization. We become a seamless extension of your Talent Acquisition team - learning your culture, adopting your brand, and managing your entire recruitment process from start to finish.
               </p>
               <p className="text-base sm:text-lg font-semibold text-gray-900 leading-relaxed">
-                The goal? Drive your long-term business growth with the right people in the right roles through proven workforce management.
+                The Goal? Drive your long-term business growth with the right people in the right roles through proven workforce management.
               </p>
             </div>
           </div>
@@ -1230,19 +1230,19 @@ const ServicesRPO = () => {
               <div className="grid gap-3 sm:gap-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500 mt-1 flex-shrink-0" />
-                  <span className="text-base sm:text-lg"><strong>Scalability</strong> — Hire as fast (or as slow) as you need with flexible RPO services</span>
+                  <span className="text-base sm:text-lg"><strong>Scalability</strong> - Hire as fast (or as slow) as you need with flexible RPO services</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500 mt-1 flex-shrink-0" />
-                  <span className="text-base sm:text-lg"><strong>Cost-Efficiency</strong> — Typically 30-60% savings in recruitment costs compared to traditional agencies</span>
+                  <span className="text-base sm:text-lg"><strong>Cost-Efficiency</strong> - Typically 30-60% savings in recruitment costs compared to traditional agencies</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500 mt-1 flex-shrink-0" />
-                  <span className="text-base sm:text-lg"><strong>Quality</strong> — A continuous pipeline of high-quality candidates through strategic talent acquisition</span>
+                  <span className="text-base sm:text-lg"><strong>Quality</strong> - A continuous pipeline of high-quality candidates through strategic talent acquisition</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-cyan-500 mt-1 flex-shrink-0" />
-                  <span className="text-base sm:text-lg"><strong>No Overhead</strong> — No need to hire, train, or manage a large in-house recruitment team</span>
+                  <span className="text-base sm:text-lg"><strong>No Overhead</strong> - No need to hire, train, or manage a large in-house recruitment team</span>
                 </div>
               </div>
             </div>
@@ -1417,19 +1417,19 @@ const ServicesRPO = () => {
             Let's talk about how our recruitment process outsourcing can solve your talent acquisition challenges and accelerate your growth through strategic workforce management.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/contact">
+            <Link href="/contact#contact-form">
               <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-white text-cyan-600 hover:bg-gray-100 rounded-xl">
                 Schedule a Free Consultation
               </Button>
             </Link>
-            <Button 
+            {/* <Button 
               size="lg" 
               variant="outline" 
               className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 border-white text-white hover:bg-white/10 rounded-xl"
             >
               Download Our RPO Guide
               <Download className="ml-2 h-4 w-4" />
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

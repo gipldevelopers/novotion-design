@@ -147,12 +147,12 @@
 //                   View Open Positions <ArrowRight className="ml-2 h-5 w-5" />
 //                 </Button>
 //               </Link>
-//               {/* <Link href="/contact">
+//               {/* <Link href="/contact#contact-form">
 //                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-purple-600">
 //                   Send Your Resume
 //                 </Button>
 //               </Link> */}
-//               <Link href="/contact">
+//               <Link href="/contact#contact-form">
 //   <Button size="lg" variant="outline">
 //     Send Your Resume
 //   </Button>
@@ -321,12 +321,12 @@
 //                       </div>
 //                     </div>
 //                     <div className="flex flex-col gap-3">
-//                       <Link href="/contact">
+//                       <Link href="/contact#contact-form">
 //                         <Button size="lg" className="w-full lg:w-auto">
 //                           Apply Now
 //                         </Button>
 //                       </Link>
-//                       <Link href="/contact">
+//                       <Link href="/contact#contact-form">
 //                         <Button variant="outline" size="lg" className="w-full lg:w-auto">
 //                           Learn More
 //                         </Button>
@@ -345,7 +345,7 @@
 //                 We're always looking for talented individuals who share our passion for recruitment and talent solutions.
 //                 Send us your resume and we'll keep you in mind for future opportunities.
 //               </p>
-//               <Link href="/contact">
+//               <Link href="/contact#contact-form">
 //                 <Button size="lg" variant="outline">
 //                   Send Us Your Resume
 //                 </Button>
@@ -514,7 +514,7 @@
 //                   View Open Positions <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
 //                 </Button>
 //               </Link>
-//               <Link href="/contact">
+//               <Link href="/contact#contact-form">
 //                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-purple-600 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
 //                   Send Your Resume
 //                 </Button>
@@ -683,12 +683,12 @@
 //                       </div>
 //                     </div>
 //                     <div className="flex flex-col gap-2 sm:gap-3 mt-4 lg:mt-0">
-//                       <Link href="/contact">
+//                       <Link href="/contact#contact-form">
 //                         <Button size="lg" className="w-full lg:w-auto text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
 //                           Apply Now
 //                         </Button>
 //                       </Link>
-//                       <Link href="/contact">
+//                       <Link href="/contact#contact-form">
 //                         <Button variant="outline" size="lg" className="w-full lg:w-auto text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
 //                           Learn More
 //                         </Button>
@@ -707,7 +707,7 @@
 //                 We're always looking for talented individuals who share our passion for recruitment and talent solutions.
 //                 Send us your resume and we'll keep you in mind for future opportunities.
 //               </p>
-//               <Link href="/contact">
+//               <Link href="/contact#contact-form">
 //                 <Button size="lg" variant="outline" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
 //                   Send Us Your Resume
 //                 </Button>
@@ -930,7 +930,7 @@
 //                   <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
 //                 </Button>
 //               </Link>
-//               <Link href="/contact">
+//               <Link href="/contact#contact-form">
 //                 <Button 
 //                   size="lg" 
 //                   variant="outline" 
@@ -1115,7 +1115,7 @@
 //                       </div>
 //                     </div>
 //                     <div className="flex flex-col gap-2 md:gap-3 mt-4 lg:mt-0 lg:w-auto">
-//                       <Link href="/contact">
+//                       <Link href="/contact#contact-form">
 //                         <Button 
 //                           size="lg" 
 //                           className="group bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 px-4 md:px-6 py-2 md:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all text-sm md:text-base w-full lg:w-auto"
@@ -1124,7 +1124,7 @@
 //                           <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
 //                         </Button>
 //                       </Link>
-//                       <Link href="/contact">
+//                       <Link href="/contact#contact-form">
 //                         <Button 
 //                           variant="outline" 
 //                           size="lg" 
@@ -1148,7 +1148,7 @@
 //                   We're always looking for talented individuals who share our passion for recruitment and talent solutions.
 //                   Send us your resume and we'll keep you in mind for future opportunities.
 //                 </p>
-//                 <Link href="/contact">
+//                 <Link href="/contact#contact-form">
 //                   <Button 
 //                     size="lg" 
 //                     variant="outline" 
@@ -1393,7 +1393,7 @@
 //                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
 //                 </Button>
 //               </Link>
-//               <Link href="/contact">
+//               <Link href="/contact#contact-form">
 //                 <Button 
 //                   size="lg" 
 //                   variant="outline" 
@@ -1572,7 +1572,7 @@
 //                       </div>
 //                     </div>
 //                     <div className="flex flex-col gap-2 sm:gap-3 mt-4 lg:mt-0">
-//                       <Link href="/contact">
+//                       <Link href="/contact#contact-form">
 //                         <Button 
 //                           size="lg" 
 //                           className="group bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg hover:shadow-xl transition-all text-sm sm:text-base w-full lg:w-auto"
@@ -1581,7 +1581,7 @@
 //                           <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
 //                         </Button>
 //                       </Link>
-//                       <Link href="/contact">
+//                       <Link href="/contact#contact-form">
 //                         <Button 
 //                           variant="outline" 
 //                           size="lg" 
@@ -1605,7 +1605,7 @@
 //                   We're always looking for talented individuals who share our passion for recruitment and talent solutions.
 //                   Send us your resume and we'll keep you in mind for future opportunities.
 //                 </p>
-//                 <Link href="/contact">
+//                 <Link href="/contact#contact-form">
 //                   <Button 
 //                     size="lg" 
 //                     variant="outline" 
@@ -1668,7 +1668,8 @@ import {
   Rocket,
   Globe,
   Award,
-  BookOpen
+  BookOpen,
+  Globe2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
@@ -1718,7 +1719,7 @@ const Career = () => {
 
   const benefits = [
     { icon: TrendingUp, title: 'Grow With Us', description: 'Continuous learning and career advancement opportunities in the fast-paced recruitment industry and talent acquisition field', color: 'green' },
-    { icon: Globe, title: 'Global Team, Unified Mission', description: 'Work with a diverse, talented team across the UK, USA, and India—bringing together the best minds in recruitment and career support from around the world', color: 'blue' },
+    { icon: Globe, title: 'Global Team, Unified Mission', description: 'Work with a diverse, talented team across USA, and India - bringing together the best minds in recruitment and career support from around the world', color: 'blue' },
     { icon: Heart, title: 'Work-Life Balance', description: 'Flexible work arrangements and a supportive environment in our recruitment operations that respects your personal life', color: 'pink' },
     { icon: Target, title: 'Make an Impact', description: 'Help shape careers and build successful organizations through talent acquisition. Your work in recruitment directly changes lives', color: 'purple' },
     { icon: Award, title: 'Clear Career Progression', description: 'Structured advancement paths in recruitment with regular performance reviews and promotion opportunities in RPO services', color: 'orange' },
@@ -1817,6 +1818,11 @@ const Career = () => {
       icon: Users,
       title: "Empowerment",
       description: "Enabling growth and development in career support"
+    },
+    {
+      icon: Globe2,
+      title: "Global Excellence",
+      description: "Delivering unified recruitment excellence across the regions"
     }
   ];
 
@@ -1840,18 +1846,18 @@ const Career = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl px-4 py-2 mb-4 sm:mb-6 shadow-2xl">
               <div className="flex items-center gap-1">
-                <Sparkles className="h-4 w-4 text-yellow-400" />
+                {/* <Sparkles className="h-4 w-4 text-yellow-400" /> */}
                 <span className="text-white/90 text-xs font-semibold tracking-wide">
                   Join Our Team
                 </span>
               </div>
-              <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <div className="flex items-center gap-1">
+              {/* <div className="w-1 h-1 bg-white/40 rounded-full"></div> */}
+              {/* <div className="flex items-center gap-1">
                 <Rocket className="h-3 w-3 text-cyan-400" />
                 <span className="text-white/70 text-xs">
                   Global Opportunities
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Main Heading */}
@@ -1877,7 +1883,7 @@ const Career = () => {
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="/contact#contact-form">
                 <Button 
                   size="lg" 
                   variant="outline" 
@@ -1949,11 +1955,11 @@ const Career = () => {
               <p className="text-base sm:text-lg text-gray-600">
                 At Novotion, we believe in Integrity, Excellence, Commitment, Innovation, and Empowerment in everything related to recruitment and career development.
               </p>
-              <p className="text-sm sm:text-base text-gray-500 mt-2">
-                These aren't just buzzwords—they're the foundation of our recruitment culture and how we approach talent acquisition every day.
+              <p className="text-base sm:text-lg text-gray-600 mt-2">
+                These aren't just buzzwords - they're the foundation of our recruitment culture and how we approach talent acquisition every day.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {values.map((value, index) => (
                 <Card key={index} className="text-center hover-lift">
                   <CardContent className="space-y-3">
@@ -1981,10 +1987,13 @@ const Career = () => {
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">About Novotion</h2>
                 <div className="space-y-4 text-gray-600">
                   <p className="text-base sm:text-lg leading-relaxed">
-                    Since 2021, we've built a reputation for being a trusted partner in recruitment and career support services. Our team spans three continents, working together to deliver exceptional talent acquisition results for clients and candidates alike.
+                   Novotion is a focused RPO and placement services company committed to connecting top talent with high-performing organizations.
                   </p>
                   <p className="text-base sm:text-lg leading-relaxed">
-                    We invest in our people in recruitment. From day one, you'll receive comprehensive training in RPO services, ongoing mentorship in talent acquisition, and opportunities to grow your skills in recruitment. Whether you're passionate about hiring, IT staffing, or talent strategy, you'll find a home at Novotion.
+                   Since 2021, we’ve expanded our operations across India, the USA, and the UK, offering tailored recruitment, training, and career development solutions to support both candidates and employers. 
+                  </p>
+                  <p className="text-base sm:text-lg leading-relaxed">
+                   Our purpose is straightforward: empowering professionals and companies to achieve meaningful growth. Through a blend of expert guidance and modern recruitment strategies, we ensure every candidate is equipped, supported, and positioned for sustained success. 
                   </p>
                 </div>
               </div>
@@ -2129,7 +2138,7 @@ const Career = () => {
                       </div>
                     </div>
                     <div className="flex flex-col gap-2 sm:gap-3 mt-4 lg:mt-0">
-                      <Link href="/contact">
+                      <Link href="/contact#contact-form">
                         <Button 
                           size="lg" 
                           className="group bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg hover:shadow-xl transition-all text-sm sm:text-base w-full lg:w-auto"
@@ -2152,7 +2161,7 @@ const Career = () => {
                 <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">
                   We're always interested in hearing from talented professionals passionate about recruitment and career development. Send us your resume and let us know how you'd like to contribute to Novotion's talent acquisition mission.
                 </p>
-                <Link href="/contact">
+                <Link href="/contact#contact-form">
                   <Button 
                     size="lg" 
                     variant="outline" 
@@ -2186,11 +2195,11 @@ const Career = () => {
                   View Open Positions
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="/contact#contact-form">
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all text-sm sm:text-base"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-full sm:w-auto px-6 py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all font-semibold text-sm sm:text-base"
                 >
                   Contact Our HR Team
                 </Button>

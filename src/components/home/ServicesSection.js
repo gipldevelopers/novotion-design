@@ -515,8 +515,8 @@ const ServicesSection = () => {
     rpo: {
       title: 'RPO Services',
       subtitle: 'For Organizations',
-      description: 'Struggling with costly recruitment cycles and time-consuming hiring processes? Our recruitment process outsourcing solutions turn talent acquisition from a headache into your competitive advantage.',
-      longDescription: 'We become an extension of your HR team managing everything from strategic workforce planning to candidate onboarding so you can focus on growing your business.',
+      description: 'Simplify hiring and cut costs with our end-to-end recruitment process outsourcing. We act as an extension of your HR team managing everything from workforce planning to onboarding so you can stay focused on growth. ',
+      // longDescription: 'We become an extension of your HR team managing everything from strategic workforce planning to candidate onboarding so you can focus on growing your business.',
       icon: Building,
       color: 'primary',
       features: [
@@ -532,8 +532,8 @@ const ServicesSection = () => {
     career: {
       title: 'Career Support Services',
       subtitle: 'For IT Professionals',
-      description: "Not currently assigned to a project or transitioning between roles? We're here to support you.",
-      longDescription: 'Our Career Support Services team proactively promotes your profile to our broad network of U.S. clients and vendors, helping you secure your next IT contract faster through proven talent marketing and placement strategies.  ',
+      description: "Between projects or transitioning roles? We help you land your next IT contract faster by promoting your profile to our extensive U.S. client and vendor network",
+      // longDescription: 'Our Career Support Services team proactively promotes your profile to our broad network of U.S. clients and vendors, helping you secure your next IT contract faster through proven talent marketing and placement strategies.  ',
       icon: Briefcase,
       color: 'primary',
       features: [
@@ -621,7 +621,7 @@ const ServicesSection = () => {
                       {currentService.title}
                     </h3>
 
-                    <p className="text-gray-600 text-lg mb-3">
+                    <p className="text-gray-600 mb-3">
                       {currentService.description}
                     </p>
 

@@ -36,7 +36,7 @@
 //     },
 //     { href: '/blog', label: 'Blog' },
 //     { href: '/career', label: 'Career' },
-//     { href: '/contact', label: 'Contact Us' },
+//     { href: '/contact#contact-form', label: 'Contact Us' },
 //   ];
 
 //   return (
@@ -107,7 +107,7 @@
 //               <Phone className="h-4 w-4 text-blue-600" />
 //               <span>+1 (786) 652-3950</span>
 //             </div>
-//             <Link href="/contact">
+//             <Link href="/contact#contact-form">
 //               <Button size="sm" className="group bg-blue-600 text-white hover:bg-blue-700">
 //                 Get Started
 //                 <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -180,7 +180,7 @@
 //                 <Phone className="h-4 w-4 text-blue-600" />
 //                 <span>+1 (786) 652-3950</span>
 //               </div>
-//               <Link href="/contact" onClick={() => setIsOpen(false)}>
+//               <Link href="/contact#contact-form" onClick={() => setIsOpen(false)}>
 //                 <Button className="w-full group bg-blue-600 text-white hover:bg-blue-700">
 //                   Get Started
 //                   <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -234,7 +234,7 @@ const Header = () => {
     },
     { href: '/blog', label: 'Blog' },
     { href: '/career', label: 'Career' },
-    { href: '/contact', label: 'Contact Us' },
+    { href: '/contact#contact-form', label: 'Contact Us' },
   ];
 
   return (
@@ -333,7 +333,7 @@ const Header = () => {
               <span>+1 (786) 652-3950</span>
             </div>
 
-            <Link href="/contact">
+            <Link href="/contact#contact-form">
               <Button
                 size="sm"
                 className="btn-primary px-4 py-2 font-medium rounded-lg"
@@ -406,7 +406,7 @@ const Header = () => {
                 <span>+1 (786) 652-3950</span>
               </div>
 
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <Link href="/contact#contact-form" onClick={() => setIsOpen(false)}>
                 <Button className="btn-primary w-full py-3 font-medium rounded-lg">
                   Get Started
                 </Button>

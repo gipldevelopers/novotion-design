@@ -267,7 +267,7 @@
 //                 </Button>
 //               </Link>
               
-//               <Link href="/contact" className="w-full sm:w-auto">
+//               <Link href="/contact#contact-form" className="w-full sm:w-auto">
 //                 <Button 
 //                   variant="outline" 
 //                   size="lg"
@@ -665,7 +665,7 @@
 //                 </button>
 //               </Link>
 
-//               <Link href="/contact">
+//               <Link href="/contact#contact-form">
 //                 <button className="btn-outline-primary w-full sm:w-auto px-6 py-3 rounded-lg font-medium flex items-center gap-2">
 //                   <Users className="w-4 h-4 text-primary" />
 //                   Contact Us
@@ -1236,7 +1236,7 @@
 //       button1Text: "Explore How We Work",
 //       button1Link: "/about",
 //       button2Text: "Partner With Us",
-//       button2Link: "/contact",
+//       button2Link: "/contact#contact-form",
 //       features: [
 //         "End-to-end talent acquisition",
 //         "High-quality sourcing & screening",
@@ -2071,7 +2071,7 @@ const HeroSection = () => {
             <AnimatePresence mode="wait">
               <motion.h1
                 key={`title-${currentSlide}`}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
+                className="text-5xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}

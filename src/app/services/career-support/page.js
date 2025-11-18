@@ -147,7 +147,7 @@
 //             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed">
 //               We are the U.S. IT market's premier career partner. We actively market your skills, connect you with top-tier projects, and manage your next career move.
 //             </p>
-//             <Link href="/contact">
+//             <Link href="/contact#contact-form">
 //               <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
 //                 Schedule Your Consultation <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
 //               </Button>
@@ -281,12 +281,12 @@
 //             Whether you're an individual IT professional or a consulting firm managing a team, Novotion provides the strategy, network, and support to maximize your placements and profitability.
 //           </p>
 //           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-//             <Link href="/contact">
+//             <Link href="/contact#contact-form">
 //               <Button size="lg" variant="secondary" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
 //                 Schedule Your Free Consultation
 //               </Button>
 //             </Link>
-//             <Link href="/contact">
+//             <Link href="/contact#contact-form">
 //               <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-green-600 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
 //                 Request Service Brochure
 //               </Button>
@@ -421,7 +421,7 @@
 //           <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
 //             We actively market your skills, connect you with top-tier U.S. projects, and manage your next career move.
 //           </p>
-//           <Link href="/contact">
+//           <Link href="/contact#contact-form">
 //             <Button size="lg" className="bg-white text-[#156CDB] hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold">
 //               Schedule Your Consultation <ArrowRight className="ml-2 h-5 w-5" />
 //             </Button>
@@ -509,7 +509,7 @@
 //         <p className="max-w-3xl mx-auto text-blue-100 mb-8">
 //           Novotion provides the network, strategy, and end‑to‑end support you need.
 //         </p>
-//         <Link href="/contact">
+//         <Link href="/contact#contact-form">
 //           <Button size="lg" className="bg-white text-[#156CDB] hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold">
 //             Schedule Your Consultation
 //           </Button>
@@ -692,7 +692,7 @@
 //           </p>
 
 //           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-4 sm:pt-6">
-//             <Link href="/contact" className="w-full sm:w-auto">
+//             <Link href="/contact#contact-form" className="w-full sm:w-auto">
 //               <Button 
 //                 size="lg" 
 //                 className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl shadow-lg transition-transform hover:scale-105"
@@ -839,12 +839,12 @@
 //             Whether you're an individual IT professional or a consulting firm managing a team, Novotion provides the strategy, network, and support to maximize your placements and profitability.
 //           </p>
 //           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-//             <Link href="/contact">
+//             <Link href="/contact#contact-form">
 //               <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-white text-cyan-600 hover:bg-gray-100 rounded-xl w-full sm:w-auto">
 //                 Schedule Your Free Consultation
 //               </Button>
 //             </Link>
-//             <Link href="/contact">
+//             <Link href="/contact#contact-form">
 //               <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-cyan-600 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
 //                 Request Service Brochure
 //               </Button>
@@ -936,7 +936,7 @@ const ServicesCareer = () => {
     {
       icon: FileText,
       title: 'Professional Branding & Marketing',
-      description: 'We craft a compelling and polished professional narrative through targeted résumé optimization that highlights your technical achievements, strengths, and unique value. We then proactively market your profile across our exclusive vendor networks and direct client channels to ensure maximum career visibility and exposure.',
+      description: 'We shape a strong professional narrative through targeted resume optimization and highlight your technical strengths. Our team then proactively promotes your profile across exclusive vendor networks and direct client channels to maximize visibility and opportunities.',
       result: 'You get noticed faster by the right decision-makers for the right IT roles and high-value contract opportunities.'
     },
     {
@@ -1026,7 +1026,7 @@ const ServicesCareer = () => {
     {
       name: 'Michael Rodriguez',
       role: 'Cloud Solutions Architect',
-      quote: 'The team at Novotion doesn\'t just forward resumes—they truly partner with you. Their negotiation support helped me secure a 20% higher rate than I expected.',
+      quote: 'The team at Novotion doesn\'t just forward resumes - they truly partner with you. Their negotiation support helped me secure a 20% higher rate than I expected.',
       project: 'Tech Startup - Silicon Valley'
     },
     {
@@ -1040,7 +1040,7 @@ const ServicesCareer = () => {
   const faqs = [
     {
       question: 'How is Novotion\'s Career Support different from a regular job portal?',
-      answer: 'We don\'t just forward resumes—we actively market your profile, coordinate interviews, negotiate contracts, and act as a strategic career partner in the U.S. IT market.'
+      answer: 'We don\'t just forward resumes - we actively market your profile, coordinate interviews, negotiate contracts, and act as a strategic career partner in the U.S. IT market.'
     },
     {
       question: 'Do you only support IT professionals?',
@@ -1052,7 +1052,7 @@ const ServicesCareer = () => {
     },
     {
       question: 'Do you charge upfront fees?',
-      answer: 'No. Our career support is performance-based—you pay nothing upfront.'
+      answer: 'No. Our career support is performance-based, you pay nothing upfront.'
     },
     {
       question: 'Will you help me prepare for interviews?',
@@ -1079,15 +1079,15 @@ const ServicesCareer = () => {
 
         <div className="relative container mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-8 z-10">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 sm:px-6 sm:py-3 mb-6 sm:mb-8">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></div>
+            {/* <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></div> */}
             <span className="text-white/90 text-xs sm:text-sm font-medium">
-              Career Support — U.S. Market Focus
+              Career Support - U.S. Market Focus
             </span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Stop Waiting. Start Connecting.
+              Stop Waiting, Start Connecting
             </span>
           </h1>
 
@@ -1096,7 +1096,7 @@ const ServicesCareer = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-4 sm:pt-6">
-            <Link href="/contact" className="w-full sm:w-auto">
+            <Link href="/contact#contact-form" className="w-full sm:w-auto">
               <Button 
                 size="lg" 
                 className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl shadow-lg transition-transform hover:scale-105"
@@ -1109,7 +1109,7 @@ const ServicesCareer = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl transition-all"
+                className="group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl transition-all"
               >
                 Schedule a Consultation
               </Button>
@@ -1123,11 +1123,12 @@ const ServicesCareer = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
             <div className="text-center">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">The Reality of Being "On the Bench"</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">The Reality of Being “Between Projects” 
+</h2>
             </div>
             <div className="space-y-4 sm:space-y-6 text-gray-600">
               <p className="text-base sm:text-lg leading-relaxed">
-                For a skilled IT professional, being "on the bench" isn't a vacation—it's a period of uncertainty that impacts your career growth and financial stability.
+                For a skilled IT professional, being between projects isn’t a break it’s a period of uncertainty that affects both career momentum and financial stability.
               </p>
               <p className="text-base sm:text-lg leading-relaxed">
                 For a consulting firm, it's a drain on revenue and workforce resources.
@@ -1136,7 +1137,7 @@ const ServicesCareer = () => {
                 The U.S. IT market moves fast, and every day not on a project is a missed career opportunity.
               </p>
               <p className="text-base sm:text-lg font-semibold text-gray-900 leading-relaxed">
-                This is where Novotion's Career Support Services come in.
+                This is where Novotion's Career Support Services step in.
               </p>
             </div>
           </div>
@@ -1152,7 +1153,7 @@ const ServicesCareer = () => {
             </div>
             <div className="space-y-4 sm:space-y-6 text-gray-600">
               <p className="text-base sm:text-lg leading-relaxed">
-                We are not a passive job board or a simple resume-forwarding service in IT staffing.
+                We’re more than a job board or resume-forwarding service, we actively partner with IT professionals to drive meaningful career opportunities.
               </p>
               <p className="text-base sm:text-lg leading-relaxed">
                 We are a proactive career marketing and placement partner dedicated exclusively to the U.S. IT contract market.
@@ -1161,7 +1162,7 @@ const ServicesCareer = () => {
                 Think of us as your strategic career agent. We leverage your unique strengths and our strong U.S. client and vendor network to create the right opportunities through reliable talent outreach strategies.
               </p>
               <p className="text-base sm:text-lg font-semibold text-gray-900 leading-relaxed">
-                From polishing your professional brand and marketing your profile to coordinating interviews and negotiating contracts—we handle the entire career support process. Our mission? Turn your downtime into your next great IT opportunity.
+                From polishing your professional brand and marketing your profile to coordinating interviews and negotiating contracts - we handle the entire career support process. Our mission? Turn your downtime into your next great IT opportunity.
               </p>
             </div>
           </div>
@@ -1174,7 +1175,7 @@ const ServicesCareer = () => {
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Our Approach: Strategic, Personal, Fast</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              We function as a high-performance extension of your career team. Here's how our career support services work:
+              We function as a high-performance extension of your career team. <br /> Here's how our career support services work
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 max-w-6xl mx-auto">
@@ -1281,7 +1282,7 @@ const ServicesCareer = () => {
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Success Stories</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              From Bench to Dream Job—Real Stories from Real Professionals
+              From Waiting to Winning - Real Stories from Real Professionals 
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
@@ -1323,19 +1324,34 @@ const ServicesCareer = () => {
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Ready to Land Your Next U.S. IT Contract?</h2>
           <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-3xl mx-auto text-blue-100">
-            Let's get you off the bench and into your next great IT opportunity through our proven career support services.
+            Let’s move you from career gaps to your next great IT opportunity with our proven career support services.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/contact#contact-form">
               <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-white text-cyan-600 hover:bg-gray-100 rounded-xl w-full sm:w-auto">
                 Submit Your Profile
               </Button>
             </Link>
-            <Link href="/contact">
+            {/* <Link href="/contact#contact-form">
               <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-cyan-600 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
                 Schedule a Consultation
               </Button>
+            </Link> */}
+            <Link href="/contact#contact-form">
+              <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-full sm:w-auto px-6 py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all font-semibold text-sm sm:text-base">
+                Schedule a Consultation
+              </Button>
             </Link>
+
+      {/* <Link href="/services/career-support" className="w-full sm:w-auto">
+        <Button 
+          size="lg" 
+          variant="outline" 
+          className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-full sm:w-auto px-6 py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all font-semibold text-sm sm:text-base"
+        >
+          Start Your Career Journey
+        </Button>
+      </Link> */}
           </div>
         </div>
       </section>

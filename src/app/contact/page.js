@@ -911,7 +911,7 @@
 
 // export default Contact;
 
-// // src/app/contact/page.js
+// // src/app/contact#contact-form/page.js
 // 'use client';
 // import React, { useState } from 'react';
 // import Link from 'next/link';
@@ -1442,7 +1442,7 @@
 
 // export default Contact;
 
-// // src/app/contact/page.js
+// // src/app/contact#contact-form/page.js
 // 'use client';
 // import React, { useState } from 'react';
 // import Link from 'next/link';
@@ -1993,7 +1993,7 @@
 //               Give us a call or drop us an email about your recruitment or career needs. Our talent acquisition and career support teams are here to help.
 //             </p>
 //             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-//               <Link href="/contact">
+//               <Link href="/contact#contact-form">
 //                 <Button 
 //                   size="lg" 
 //                   className="group bg-white text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
@@ -2045,7 +2045,7 @@
 
 // export default Contact;
 
-// src/app/contact/page.js
+// src/app/contact#contact-form/page.js
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -2068,6 +2068,7 @@ import {
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ReactCountryFlag from 'react-country-flag';
 
 // Enhanced Card components
 const Card = ({ children, className = "", ...props }) => (
@@ -2214,7 +2215,7 @@ const Contact = () => {
     },
     {
       question: "Do you charge professionals for Career Support services?",
-      answer: "No, our Career Support Services for IT professionals are completely free. Our career coaching, resume optimization, and interview preparation services are performance-based—we succeed when you succeed in landing your next IT contract."
+      answer: "No, our Career Support Services for IT professionals are completely free. Our career coaching, resume optimization, and interview preparation services are performance-based - we succeed when you succeed in landing your next IT contract."
     },
     {
       question: "What industries do your recruitment solutions specialize in?",
@@ -2284,18 +2285,18 @@ const Contact = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl px-4 py-2 mb-4 sm:mb-6 shadow-2xl">
               <div className="flex items-center gap-1">
-                <Sparkles className="h-4 w-4 text-yellow-400" />
+                {/* <Sparkles className="h-4 w-4 text-yellow-400" /> */}
                 <span className="text-white/90 text-xs font-semibold tracking-wide">
                   Get In Touch
                 </span>
               </div>
-              <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <div className="flex items-center gap-1">
+              {/* <div className="w-1 h-1 bg-white/40 rounded-full"></div> */}
+              {/* <div className="flex items-center gap-1">
                 <Rocket className="h-3 w-3 text-cyan-400" />
                 <span className="text-white/70 text-xs">
                   Quick Response
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Main Heading */}
@@ -2348,7 +2349,7 @@ const Contact = () => {
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-blue-50/30">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Who Are You?</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Tell Us How We Can Assist You</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               To ensure your inquiry about our recruitment solutions reaches the right team without delay, please select the option that best describes you:
             </p>
@@ -2404,7 +2405,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <section id="contact-form" className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8 sm:mb-12">
@@ -2412,9 +2413,9 @@ const Contact = () => {
               <p className="text-base sm:text-lg text-gray-600">
                 For the fastest response about our recruitment solutions or career support, please fill out the form below.
               </p>
-              <p className="text-sm sm:text-base text-gray-500 mt-2">
+              {/* <p className="text-sm sm:text-base text-gray-500 mt-2">
                 This helps us direct your message to the right talent acquisition or career services specialist.
-              </p>
+              </p> */}
             </div>
 
             {isSubmitted ? (
@@ -2537,7 +2538,14 @@ const Contact = () => {
             <Card className="hover-lift border-l-4 border-l-blue-600 bg-gradient-to-br from-white to-blue-50/50">
               <CardContent className="space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="text-2xl">🇺🇸</div>
+                   <ReactCountryFlag
+        countryCode="US"
+        svg
+        style={{
+          width: "2em",
+          height: "2em",
+        }}
+      />
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900">United States</h3>
                     <p className="text-blue-600 font-medium text-sm sm:text-base">USA Office</p>
@@ -2566,7 +2574,14 @@ const Contact = () => {
             <Card className="hover-lift border-l-4 border-l-cyan-600 bg-gradient-to-br from-white to-cyan-50/50">
               <CardContent className="space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="text-2xl">🇮🇳</div>
+                     <ReactCountryFlag
+        countryCode="IN"
+        svg
+        style={{
+          width: "2em",
+          height: "2em",
+        }}
+      />
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900">India</h3>
                     <p className="text-cyan-600 font-medium text-sm sm:text-base">India Office</p>
@@ -2576,10 +2591,10 @@ const Contact = () => {
                   <div className="flex items-start gap-2">
                     <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-cyan-500 mt-0.5 flex-shrink-0" />
                     <div className="text-sm sm:text-base">
-                      <div>FOURTH FLOOR, STREEBO HOUSE</div>
-                      <div>NR DAV SCHOOL, OFF S.G. HIGHWAY</div>
-                      <div>DAV International School, MAKARBA</div>
-                      <div>Ahmedabad District: Ahmedabad,</div>
+                      <div>Fourth floor, Streebo house</div>
+                      <div>Nr DAV school, off S.G. highway </div>
+                      <div>DAV International school, Makarba </div>
+                      <div>Ahmedabad district: Ahmedabad,</div>
                       <div>Gujarat 380051</div>
                     </div>
                   </div>
@@ -2587,10 +2602,10 @@ const Contact = () => {
                     <Mail className="h-3 w-3 sm:h-4 sm:w-4 text-cyan-500" />
                     <span className="text-sm sm:text-base">info@novotionservices.com</span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  {/* <div className="flex items-center gap-2">
                     <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-cyan-500" />
                     <span className="text-sm sm:text-base">+91 (XXX) XXX-XXXX</span>
-                  </div>
+                  </div> */}
                 </div>
               </CardContent>
             </Card>
@@ -2621,7 +2636,7 @@ const Contact = () => {
               Give us a call or drop us an email about your recruitment or career needs. Our talent acquisition and career support teams are here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Link href="/contact">
+              <Link href="/contact#contact-form">
                 <Button 
                   size="lg" 
                   className="group bg-white text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
@@ -2634,7 +2649,7 @@ const Contact = () => {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all text-sm sm:text-base"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-full sm:w-auto px-6 py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all font-semibold text-sm sm:text-base"
                 >
                   <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Email Us

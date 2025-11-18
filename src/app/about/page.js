@@ -177,7 +177,7 @@
 
 //             {/* CTA Buttons */}
 //             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-6 sm:pt-8">
-//               <Link href="/contact" className="w-full sm:w-auto">
+//               <Link href="/contact#contact-form" className="w-full sm:w-auto">
 //                 <Button 
 //                   size="lg" 
 //                   className="group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl hover:shadow-xl sm:hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
@@ -528,7 +528,7 @@
 //                 Join thousands of professionals and organizations who have transformed their careers and talent strategies with Novotion.
 //               </p>
 //               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-//                 <Link href="/contact" className="w-full sm:w-auto">
+//                 <Link href="/contact#contact-form" className="w-full sm:w-auto">
 //                   <Button 
 //                     size="lg" 
 //                     className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl hover:shadow-xl sm:hover:shadow-3xl transform hover:scale-105 transition-all duration-300 font-semibold text-sm sm:text-base"
@@ -759,7 +759,7 @@
 
 //             {/* CTA Buttons */}
 //             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-6 sm:pt-8">
-//               <Link href="/contact" className="w-full sm:w-auto">
+//               <Link href="/contact#contact-form" className="w-full sm:w-auto">
 //                 <Button 
 //                   size="lg" 
 //                   className="group text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl hover:shadow-xl sm:hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
@@ -1107,7 +1107,7 @@
 //                 Join thousands of professionals and organizations who have transformed their careers and talent strategies with Novotion.
 //               </p>
 //               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-//                 <Link href="/contact" className="w-full sm:w-auto">
+//                 <Link href="/contact#contact-form" className="w-full sm:w-auto">
 //                   <Button 
 //                     size="lg" 
 //                     className="text-blue-700 w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl hover:shadow-xl sm:hover:shadow-3xl transform hover:scale-105 transition-all duration-300 font-semibold text-sm sm:text-base"
@@ -1348,7 +1348,7 @@
 
 //             {/* CTA Buttons */}
 //             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-6">
-//               <Link href="/contact" className="w-full sm:w-auto">
+//               <Link href="/contact#contact-form" className="w-full sm:w-auto">
 //                 <Button 
 //                   size="lg" 
 //                   className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-sm sm:text-base"
@@ -1681,7 +1681,7 @@
 //                 Join thousands of professionals and organizations who have transformed their careers and talent strategies with Novotion.
 //               </p>
 //               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-//                 <Link href="/contact" className="w-full sm:w-auto">
+//                 <Link href="/contact#contact-form" className="w-full sm:w-auto">
 //                   <Button 
 //                     size="lg" 
 //                     className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all font-semibold text-sm sm:text-base"
@@ -1799,7 +1799,7 @@ const About = () => {
     { 
       icon: Award, 
       title: 'Excellence', 
-      description: 'We aim for the highest standard in every recruitment service we deliver—from a single resume optimization to a full RPO implementation.',
+      description: 'We aim for the highest standard in every recruitment service we deliver - from a single resume optimization to a full RPO implementation.',
       color: 'primary'
     },
     { 
@@ -1823,16 +1823,16 @@ const About = () => {
     { 
       icon: Globe, 
       title: 'Global Excellence', 
-      description: 'Bridging talent acquisition across the UK, USA, and India with localized recruitment expertise and global RPO standards.',
+      description: 'Bridging talent acquisition across the UK & USA with localized recruitment expertise and global RPO standards.',
       color: 'primary'
     },
   ];
 
   const testimonials = [
     {
-      name: 'Phani Datta Pabisetty',
-      title: 'QA Analyst, Ampup',
-      text: "Novotion's career support was a game-changer. Their trainer didn't just prepare me—they refined my entire approach through strategic interview preparation. I had an offer from Ampup within weeks. What really stood out was the post-placement support.",
+      name: 'Hiring Manager, Ampup ',
+      title: '',
+      text: "Novation transformed our hiring experience. Their strategic interview preparation and candidate support helped us secure the right talent quickly. What impressed us most was their continued support even after placement.",
       rating: 5,
       company: 'Ampup'
     },
@@ -1844,16 +1844,16 @@ const About = () => {
       company: 'Amazon'
     },
     {
-      name: 'Dixit Gupta Garlapati',
-      title: 'DevOps Engineer, Meta',
-      text: 'Novotion has real industry experts in career support services. They connected me with a trainer who understood exactly what companies like Meta look for in talent acquisition. I owe a huge part of my success to their recruitment team.',
+      name: 'Hiring Manager, Meta ',
+      title: '',
+      text: 'Novotion brings true industry expertise to talent acquisition. Their team quickly understood our hiring expectations and delivered candidates who were exceptionally well-prepared. Their recruitment support made a measurable impact.',
       rating: 5,
       company: 'Meta'
     }
   ];
 
   const milestones = [
-    { year: '2021', title: 'The Beginning', description: 'Started with a vision to transform recruitment solutions—making talent acquisition more human, more strategic, and more impactful through innovative RPO services.' },
+    { year: '2021', title: 'The Beginning', description: 'Started with a vision to transform recruitment solutions - making talent acquisition more human, more strategic, and more impactful through innovative RPO services.' },
     { year: '2022', title: 'Momentum Builds', description: 'Crossed 100 successful placements and established our reputation for quality recruitment process outsourcing and reliable career support services.' },
     { year: '2023', title: 'Going Global', description: 'Expanded recruitment solutions to UK and USA markets, bringing our client-first RPO approach and talent acquisition expertise to international audiences.' },
     { year: '2024', title: 'Scaling Impact', description: 'Served 500+ organizations worldwide with recruitment process outsourcing and placed thousands of professionals through comprehensive career support services.' },
@@ -1898,18 +1898,18 @@ const About = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl px-4 py-2 mb-4 sm:mb-6 shadow-2xl">
               <div className="flex items-center gap-1">
-                <Sparkles className="h-4 w-4 text-yellow-400" />
+                {/* <Sparkles className="h-4 w-4 text-yellow-400" /> */}
                 <span className="text-white/90 text-xs font-semibold tracking-wide">
                   Our Story
                 </span>
               </div>
-              <div className="w-1 h-1 bg-white/40 rounded-full"></div>
-              <div className="flex items-center gap-1">
+              {/* <div className="w-1 h-1 bg-white/40 rounded-full"></div> */}
+              {/* <div className="flex items-center gap-1">
                 <Rocket className="h-3 w-3 text-cyan-400" />
                 <span className="text-white/70 text-xs">
                   Since 2021
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Main Heading */}
@@ -1921,12 +1921,12 @@ const About = () => {
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto px-4">
-              We are Novotion—architects of opportunity and masters of talent acquisition.
+              We are Novotion - architects of opportunity and masters of talent acquisition.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-6">
-              <Link href="/contact" className="w-full sm:w-auto">
+              <Link href="/contact#contact-form" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
                   className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-sm sm:text-base"
@@ -1965,7 +1965,7 @@ const About = () => {
                 </div>
 
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
-                  We are Novotion—a specialized Recruitment Process Outsourcing (RPO) and Career Support Services company.
+                  We are Novotion - a specialized Recruitment Process Outsourcing (RPO) and Career Support Services company.
                 </h2>
 
                 <div className="space-y-4 leading-relaxed text-gray-600">
@@ -1978,9 +1978,9 @@ const About = () => {
                   <p className="text-sm sm:text-base">
                     Founded in 2021, Novotion operates with a truly global recruitment footprint. With strategic centers in India and the USA, and strengthened operational capabilities across the UK, we blend deep local market expertise with the power of 24/7 workforce management operations.
                   </p>
-                  <p className="text-sm sm:text-base font-semibold text-blue-600">
+                  {/* <p className="text-sm sm:text-base font-semibold text-blue-600">
                     The result? Faster talent acquisition. Better matches through our RPO services. Lasting partnerships in recruitment.
-                  </p>
+                  </p> */}
                 </div>
 
                 <div className="flex items-center gap-4 pt-4">
@@ -2005,7 +2005,7 @@ const About = () => {
                     </div>
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900">Our Mission</h3>
                     <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                      To be the most trusted partner in career development and talent acquisition—known not just for our recruitment process outsourcing results, but for our integrity and unwavering commitment to the success of every client and candidate we serve.
+                      Our Mission is to be the most reliable partner in career growth and talent acquisition recognized not only for our RPO excellence, but for our integrity and our steadfast dedication to the success of every client and candidate we support.
                     </p>
                   </CardContent>
                 </Card>
@@ -2126,16 +2126,16 @@ const About = () => {
               {/* Left Content */}
               <div className="space-y-6 animate-on-scroll">
                 {[
-                  {
-                    icon: Globe,
-                    title: "Global Presence, Local Expertise",
-                    description: "Bridging talent acquisition across the UK, USA, and India with localized recruitment expertise and global RPO standards."
-                  },
-                  {
-                    icon: Users,
-                    title: "You're Not Just a Number",
-                    description: "You get dedicated recruitment consultants who know your name, understand your industry's hiring process, and are genuinely invested in your specific talent acquisition goals."
-                  },
+                  // {
+                  //   icon: Globe,
+                  //   title: "Global Presence, Local Expertise",
+                  //   description: "Bridging talent acquisition across the UK, USA, and India with localized recruitment expertise and global RPO standards."
+                  // },
+                  // {
+                  //   icon: Users,
+                  //   title: "You're Not Just a Number",
+                  //   description: "You get dedicated recruitment consultants who know your name, understand your industry's hiring process, and are genuinely invested in your specific talent acquisition goals."
+                  // },
                   {
                     icon: Award,
                     title: "Industry Specialization",
@@ -2154,7 +2154,7 @@ const About = () => {
                   {
                     icon: Clock,
                     title: "24/7 Support",
-                    description: "Our global reach and round-the-clock recruitment support model mean our talent acquisition team is always working for you—ensuring no career opportunity is missed."
+                    description: "Our global reach and round-the-clock recruitment support model mean our talent acquisition team is always working for you - ensuring no career opportunity is missed."
                   }
                 ].map((item, index) => (
                   <div key={index} className="flex gap-3 group hover:scale-[1.02] transition-transform duration-300">
@@ -2265,8 +2265,8 @@ const About = () => {
               <p className="text-white text-sm sm:text-base mb-6 max-w-2xl mx-auto">
                 Whether you're ready to transform your hiring process through recruitment process outsourcing or take your career to the next level with our career support services, we're here to help.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/contact" className="w-full sm:w-auto">
+              {/* <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link href="/contact#contact-form" className="w-full sm:w-auto">
                   <Button 
                     size="lg" 
                     className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all font-semibold text-sm sm:text-base"
@@ -2283,7 +2283,26 @@ const About = () => {
                     Start Your Career Journey
                   </Button>
                 </Link>
-              </div>
+              </div> */}
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+  <Link href="/contact#contact-form" className="w-full sm:w-auto">
+    <Button 
+      size="lg" 
+      className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all font-semibold text-sm sm:text-base"
+    >
+      Partner With Us
+    </Button>
+  </Link>
+  <Link href="/services/career-support" className="w-full sm:w-auto">
+    <Button 
+      size="lg" 
+      variant="outline" 
+      className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-full sm:w-auto px-6 py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all font-semibold text-sm sm:text-base"
+    >
+      Start Your Career Journey
+    </Button>
+  </Link>
+</div>
             </div>
           </div>
         </div>

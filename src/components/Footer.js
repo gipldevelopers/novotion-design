@@ -527,10 +527,10 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
                 <div className="text-gray-400 text-sm">
                   <div className="font-medium mb-1">India Office:</div>
-                  <div>FOURTH FLOOR, STREEBO HOUSE</div>
-                  <div>NR DAV SCHOOL, OFF S.G. HIGHWAY</div>
-                  <div>DAV International School, MAKARBA</div>
-                  <div>Ahmedabad District: Ahmedabad,</div>
+                  <div>Fourth floor, Streebo house</div>
+                  <div>Nr DAV school, off S.G. highway </div>
+                  <div>DAV International school, Makarba </div>
+                  <div>Ahmedabad district: Ahmedabad,</div>
                   <div>Gujarat 380051</div>
                 </div>
               </li>

@@ -154,11 +154,11 @@ const TestimonialsSection = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="text-center mt-8">
+          {/* <div className="text-center mt-8">
             <p className="text-gray-600 text-sm">
               Join thousands of professionals who have advanced their careers with Novotion
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -5625,7 +5625,7 @@ const Blog = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-4 sm:mb-6">
               <div className="flex items-center gap-1">
-                <Sparkles className="h-4 w-4 text-secondary" />
+                {/* <Sparkles className="h-4 w-4 text-secondary" /> */}
                 <span className="text-white/90 text-xs font-medium">
                   Expert Insights
                 </span>
@@ -5643,7 +5643,7 @@ const Blog = () => {
             </p>
 
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mt-8 px-4">
+            {/* <div className="max-w-2xl mx-auto mt-8 px-4">
               <div className="relative group">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 h-4 w-4 group-focus-within:text-secondary transition-all" />
                 
@@ -5655,7 +5655,7 @@ const Blog = () => {
                   className="w-full pl-12 pr-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition-all duration-300 text-sm"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Quick Stats */}
             <div className="flex justify-center gap-6 pt-6">
@@ -5689,7 +5689,7 @@ const Blog = () => {
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
               Welcome to the Novotion blog - your comprehensive resource for insights, strategies, and thought leadership in recruitment and career development.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 text-lg leading-relaxed">
               Whether you're a hiring manager looking to optimize your talent acquisition strategy through RPO services or an IT professional navigating the U.S. contract market with our career support, we've got you covered.
             </p>
             <p className="text-gray-600 font-semibold mt-6">
@@ -5707,7 +5707,7 @@ const Blog = () => {
             <div className="text-center mb-8 sm:mb-12 animate-on-scroll">
               
               <div className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-full mb-4 sm:mb-6">
-                <Star className="h-4 w-4 text-secondary" />
+                {/* <Star className="h-4 w-4 text-secondary" /> */}
                 <span className="font-semibold text-sm">Featured Articles</span>
               </div>
 
@@ -6060,7 +6060,7 @@ const Blog = () => {
 
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-                <Zap className="h-4 w-4 text-secondary" />
+                {/* <Zap className="h-4 w-4 text-secondary" /> */}
                 <span className="text-white/90 text-sm font-semibold">
                   Never Miss an Insight
                 </span>
@@ -6077,7 +6077,7 @@ const Blog = () => {
               </p>
 
               {/* Email Input + CTA */}
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              {/* <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                 <input
                   type="email"
                   placeholder="Enter your professional email"
@@ -6087,7 +6087,25 @@ const Blog = () => {
                 <Button className="btn-secondary px-6 py-3 rounded-lg font-semibold text-sm whitespace-nowrap">
                   Subscribe Now
                 </Button>
-              </div>
+              </div> */}
+
+                {/* Email Input + CTA */}
+  <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+    <input
+      type="email"
+      placeholder="Enter your professional email"
+      className={`flex-1 px-4 py-3 rounded-lg bg-card border border-border text-foreground 
+                 placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary 
+                 shadow-sm text-sm`}
+    />
+
+    <Button
+      variant="secondary"
+      className="px-6 py-3 rounded-lg font-semibold text-sm whitespace-nowrap"
+    >
+      Subscribe Now
+    </Button>
+  </div>
 
               <p className="text-white/60 text-xs mt-4">
                 No spam. Unsubscribe anytime. Professional recruitment and career content only.
@@ -6104,7 +6122,7 @@ const Blog = () => {
             <Card className="border border-primary/20 bg-white/50 backdrop-blur-sm">
               <CardContent className="py-12">
                 <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
-                  <Lightbulb className="h-4 w-4" />
+                  {/* <Lightbulb className="h-4 w-4" /> */}
                   <span className="font-semibold text-sm">Share Your Ideas</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">
@@ -6113,9 +6131,11 @@ const Blog = () => {
                 <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
                   We're always looking for fresh perspectives on recruitment, RPO services, and career support. Let us know what you'd like to learn more about.
                 </p>
+                <Link href="/contact#contact-form">
                 <Button className="btn-primary px-8 py-3 rounded-lg font-semibold text-sm">
                   Suggest a Topic
                 </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
