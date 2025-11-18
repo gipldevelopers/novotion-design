@@ -79,50 +79,6 @@
 //   );
 // };
 
-// // src/components/ui/button.js
-// import Link from 'next/link';
-
-// export const Button = ({ 
-//   children, 
-//   variant = 'primary', 
-//   size = 'md', 
-//   className = '', 
-//   href,
-//   onClick,
-//   ...props 
-// }) => {
-//   const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-200 hover-lift';
-  
-//   const variants = {
-//     primary: 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800',
-//     secondary: 'bg-white text-blue-600 border-2 border-blue-600 shadow-md hover:bg-blue-600 hover:text-white',
-//     outline: 'bg-white text-gray-700 border-2 border-gray-300 shadow-md hover:border-blue-600 hover:text-blue-600', // CHANGED THIS LINE
-//     ghost: 'bg-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-//   };
-  
-//   const sizes = {
-//     sm: 'px-4 py-2 text-sm',
-//     md: 'px-6 py-3 text-base',
-//     lg: 'px-8 py-4 text-lg'
-//   };
-  
-//   const buttonClass = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
-  
-//   if (href) {
-//     return (
-//       <Link href={href} className={buttonClass} {...props}>
-//         {children}
-//       </Link>
-//     );
-//   }
-  
-//   return (
-//     <button className={buttonClass} onClick={onClick} {...props}>
-//       {children}
-//     </button>
-//   );
-// };
-
 // src/components/ui/button.js
 import Link from 'next/link';
 
@@ -135,12 +91,12 @@ export const Button = ({
   onClick,
   ...props 
 }) => {
-  const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300';
+  const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-200 hover-lift';
   
   const variants = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700',
-    secondary: 'bg-white text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white',
-    outline: 'bg-transparent text-gray-700 border border-gray-300 hover:border-blue-600 hover:text-blue-600',
+    primary: 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800',
+    secondary: 'bg-white text-blue-600 border-2 border-blue-600 shadow-md hover:bg-blue-600 hover:text-white',
+    outline: 'bg-white text-gray-700 border-2 border-gray-300 shadow-md hover:border-blue-600 hover:text-blue-600', // CHANGED THIS LINE
     ghost: 'bg-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-900'
   };
   

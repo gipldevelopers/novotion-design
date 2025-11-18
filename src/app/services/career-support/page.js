@@ -1109,7 +1109,7 @@ const ServicesCareer = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:text-white w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl transition-all"
+                className=" group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all text-sm sm:text-base"
               >
                 Schedule a Consultation
               </Button>
@@ -1338,10 +1338,12 @@ const ServicesCareer = () => {
               </Button>
             </Link> */}
             <Link href="/contact#contact-form">
-              <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-full sm:w-auto px-6 py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all font-semibold text-sm sm:text-base">
+              <Button size="lg" variant="outline" className=" group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all text-sm sm:text-base">
                 Schedule a Consultation
               </Button>
             </Link>
+
+           
 
       {/* <Link href="/services/career-support" className="w-full sm:w-auto">
         <Button 
