@@ -430,7 +430,7 @@ const WhyChooseUs = () => {
     { 
       icon: Award, 
       title: 'Industry Expertise', 
-      description: 'Our RPO services teams specialize in 15+ industries—from tech and healthcare to finance and engineering. We speak your language and understand what makes your sector\'s hiring process unique.',
+      description: 'Our RPO services teams specialize in 15+ industries from tech and healthcare to finance and engineering. We speak your language and understand what makes your sector\'s hiring process unique.',
       color: 'primary'
     },
     { 
@@ -448,7 +448,7 @@ const WhyChooseUs = () => {
     { 
       icon: Zap, 
       title: '24/7 Support', 
-      description: 'With teams across time zones, our recruitment solutions never sleep—ensuring no career opportunity or hiring need slips through the cracks.',
+      description: 'With teams across time zones, our recruitment solutions never sleep ensuring no career opportunity or hiring need slips through the cracks.',
       color: 'primary'
     },
   ];

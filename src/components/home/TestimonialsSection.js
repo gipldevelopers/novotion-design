@@ -16,7 +16,7 @@ const TestimonialsSection = () => {
       id: 1,
       name: 'Phani Datta Pabisetty',
       role: 'QA Analyst at Ampup',
-      content: '"Novotion\'s career support services didn\'t just help me land a job—they transformed my entire approach to professional growth. Their interview preparation was exceptional. Within weeks, I had an offer from Ampup, and their post-placement support has been incredible."',
+      content: '"Novotion\'s career support services didn\'t just help me land a job they transformed my entire approach to professional growth. Their interview preparation was exceptional. Within weeks, I had an offer from Ampup, and their post-placement support has been incredible."',
       rating: 5
     },
     {

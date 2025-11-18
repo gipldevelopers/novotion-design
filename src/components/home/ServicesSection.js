@@ -533,7 +533,7 @@ const ServicesSection = () => {
       title: 'Career Support Services',
       subtitle: 'For IT Professionals',
       description: "Not currently assigned to a project or transitioning between roles? We're here to support you.",
-      longDescription: 'Our Career Support Services team actively markets your profile to our extensive network of U.S. clients and vendors, helping you land your next IT contract faster through proven bench sales strategies. From resume optimization to interview coaching and contract negotiation—we\'re with you every step of your career development journey.',
+      longDescription: 'Our Career Support Services team proactively promotes your profile to our broad network of U.S. clients and vendors, helping you secure your next IT contract faster through proven talent marketing and placement strategies.  ',
       icon: Briefcase,
       color: 'primary',
       features: [
