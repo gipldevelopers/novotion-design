@@ -362,17 +362,1321 @@
 
 // export default Career;
 
+// // src\app\career\page.js
+// 'use client';
+// import React, { useState } from 'react';
+// import Link from 'next/link';
+// import { Briefcase, Heart, TrendingUp, Users, MapPin, Clock, ArrowRight, Star, Target, Zap } from 'lucide-react';
+// import { Button } from '@/components/ui/button';
+// import Header from '@/components/Header';
+// import Footer from '@/components/Footer';
+
+// // Simple Card components
+// const Card = ({ children, className = "", ...props }) => (
+//   <div className={`rounded-lg sm:rounded-xl border bg-white shadow-sm hover:shadow-lg transition-all duration-300 ${className}`} {...props}>
+//     {children}
+//   </div>
+// );
+
+// const CardContent = ({ children, className = "", ...props }) => (
+//   <div className={`p-4 sm:p-6 ${className}`} {...props}>
+//     {children}
+//   </div>
+// );
+
+// // Animated Counter Component
+// const AnimatedCounter = ({ value, suffix = '', duration = 2000 }) => {
+//   const [count, setCount] = useState(0);
+
+//   React.useEffect(() => {
+//     const steps = 60;
+//     const increment = parseInt(value) / steps;
+//     let current = 0;
+//     let step = 0;
+
+//     const timer = setInterval(() => {
+//       step++;
+//       current = Math.min(increment * step, parseInt(value));
+//       setCount(Math.floor(current));
+      
+//       if (step >= steps) {
+//         clearInterval(timer);
+//       }
+//     }, duration / steps);
+
+//     return () => clearInterval(timer);
+//   }, [value, duration]);
+
+//   return <span className="font-bold">{count}{suffix}</span>;
+// };
+
+// const Career = () => {
+//   const [activeTab, setActiveTab] = useState('all');
+
+//   const benefits = [
+//     { icon: TrendingUp, title: 'Growth Opportunities', description: 'Continuous learning and career advancement in the recruitment industry', color: 'blue' },
+//     { icon: Users, title: 'Collaborative Culture', description: 'Work with a diverse, talented team across UK, USA, and India', color: 'green' },
+//     { icon: Heart, title: 'Work-Life Balance', description: 'Flexible arrangements and supportive environment', color: 'pink' },
+//     { icon: Briefcase, title: 'Meaningful Impact', description: 'Help shape careers and build successful organizations', color: 'purple' },
+//     { icon: Target, title: 'Clear Career Path', description: 'Structured progression with regular performance reviews', color: 'orange' },
+//     { icon: Zap, title: 'Cutting-Edge Tools', description: 'Access to latest recruitment technologies and AI tools', color: 'yellow' },
+//   ];
+
+//   const openings = [
+//     {
+//       title: 'Senior Recruitment Consultant',
+//       location: 'Orlando, FL / Remote',
+//       type: 'Full-time',
+//       department: 'RPO Services',
+//       experience: '3+ years',
+//       description: 'Join our growing RPO team and help UK/USA clients build exceptional teams. Manage end-to-end recruitment processes.',
+//       tags: ['RPO', 'Client Management', 'Full-Cycle Recruitment']
+//     },
+//     {
+//       title: 'IT Recruiter Specialist',
+//       location: 'Ahmedabad, India / Hybrid',
+//       type: 'Full-time',
+//       department: 'Career Services',
+//       experience: '2+ years',
+//       description: 'Support our Career Services division by connecting IT professionals with opportunities in the US market.',
+//       tags: ['IT Recruitment', 'US Market', 'Candidate Sourcing']
+//     },
+//     {
+//       title: 'Talent Sourcer',
+//       location: 'Remote',
+//       type: 'Full-time',
+//       department: 'Talent Acquisition',
+//       experience: '1+ years',
+//       description: 'Leverage your sourcing expertise to build talent pipelines for our global clients across multiple industries.',
+//       tags: ['Sourcing', 'Talent Pipeline', 'Market Research']
+//     },
+//     {
+//       title: 'Client Relationship Manager',
+//       location: 'Orlando, FL',
+//       type: 'Full-time',
+//       department: 'Business Development',
+//       experience: '4+ years',
+//       description: 'Build and maintain relationships with enterprise clients, understanding their talent needs and delivering solutions.',
+//       tags: ['Client Relations', 'Account Management', 'Strategic Planning']
+//     },
+//     {
+//       title: 'Recruitment Coordinator',
+//       location: 'Ahmedabad, India',
+//       type: 'Full-time',
+//       department: 'Operations',
+//       experience: '1+ years',
+//       description: 'Support recruitment operations by coordinating interviews, managing schedules, and ensuring smooth candidate experience.',
+//       tags: ['Coordination', 'Operations', 'Candidate Experience']
+//     },
+//     {
+//       title: 'Digital Marketing Specialist',
+//       location: 'Remote',
+//       type: 'Full-time',
+//       department: 'Marketing',
+//       experience: '2+ years',
+//       description: 'Drive our digital presence and employer branding initiatives across social media and professional networks.',
+//       tags: ['Digital Marketing', 'Employer Branding', 'Social Media']
+//     }
+//   ];
+
+//   const departments = ['all', 'RPO Services', 'Career Services', 'Business Development', 'Operations', 'Marketing', 'Talent Acquisition'];
+
+//   const filteredOpenings = activeTab === 'all' 
+//     ? openings 
+//     : openings.filter(opening => opening.department === activeTab);
+
+//   const colorClasses = {
+//     blue: 'bg-blue-100 text-blue-600',
+//     green: 'bg-green-100 text-green-600',
+//     pink: 'bg-pink-100 text-pink-600',
+//     purple: 'bg-purple-100 text-purple-600',
+//     orange: 'bg-orange-100 text-orange-600',
+//     yellow: 'bg-yellow-100 text-yellow-600'
+//   };
+
+//   return (
+//     <div className="min-h-screen">
+//       <Header />
+
+//       {/* Hero Section */}
+//       <section className="bg-gradient-to-br from-purple-600 to-blue-600 text-white py-12 sm:py-16 md:py-20">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
+//             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
+//               Build Your Career at Novotion
+//             </h1>
+//             <p className="text-lg sm:text-xl md:text-2xl text-purple-100 leading-relaxed">
+//               Join a global recruitment powerhouse that's redefining how organizations and professionals connect
+//             </p>
+//             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4">
+//               <Link href="#openings">
+//                 <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
+//                   View Open Positions <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+//                 </Button>
+//               </Link>
+//               <Link href="/contact">
+//                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-purple-600 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
+//                   Send Your Resume
+//                 </Button>
+//               </Link>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Stats Section */}
+//       <section className="py-8 sm:py-12 bg-white">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
+//             <div className="text-center">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-purple-600"><AnimatedCounter value="50" />+</div>
+//               <div className="text-gray-600 text-xs sm:text-sm">Team Members</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-blue-600"><AnimatedCounter value="3" /></div>
+//               <div className="text-gray-600 text-xs sm:text-sm">Continents</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-green-600"><AnimatedCounter value="15" />+</div>
+//               <div className="text-gray-600 text-xs sm:text-sm">Industries</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-orange-600"><AnimatedCounter value="500" />+</div>
+//               <div className="text-gray-600 text-xs sm:text-sm">Clients Served</div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Why Join Us */}
+//       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="text-center mb-8 sm:mb-12">
+//             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Why Build Your Career With Us?</h2>
+//             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+//               We're more than just a recruitment company. We're a team committed to excellence, innovation, and making a real difference in people's careers.
+//             </p>
+//           </div>
+//           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+//             {benefits.map((benefit, index) => (
+//               <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 group">
+//                 <CardContent className="space-y-3 text-center">
+//                   <div className={`h-12 w-12 sm:h-16 sm:w-16 rounded-xl sm:rounded-2xl ${colorClasses[benefit.color]} flex items-center justify-center mx-auto group-hover:scale-105 sm:group-hover:scale-110 transition-transform`}>
+//                     <benefit.icon className="h-6 w-6 sm:h-8 sm:w-8" />
+//                   </div>
+//                   <h3 className="text-lg sm:text-xl font-bold text-gray-900">{benefit.title}</h3>
+//                   <p className="text-gray-600 text-sm sm:text-base">{benefit.description}</p>
+//                 </CardContent>
+//               </Card>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Our Culture */}
+//       <section className="py-12 sm:py-16 md:py-20 bg-white">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="max-w-5xl mx-auto">
+//             <div className="text-center mb-8 sm:mb-12">
+//               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Our Culture & Values</h2>
+//               <p className="text-base sm:text-lg text-gray-600">
+//                 At Novotion, we believe in integrity, excellence, commitment, innovation, and empowerment
+//               </p>
+//             </div>
+//             <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+//               <div className="space-y-4 sm:space-y-6 text-gray-600">
+//                 <p className="text-base sm:text-lg leading-relaxed">
+//                   Since 2021, we've built a reputation for being a trusted partner in recruitment. Our team spans three continents, working together to deliver exceptional results for clients and candidates alike.
+//                 </p>
+//                 <p className="text-base sm:text-lg leading-relaxed">
+//                   We invest in our people. From day one, you'll receive comprehensive training, ongoing mentorship, and opportunities to grow your skills. Whether you're passionate about RPO services, IT staffing, or talent strategy, you'll find a home at Novotion.
+//                 </p>
+//               </div>
+//               <div className="space-y-4 sm:space-y-6">
+//                 <div className="flex items-start gap-3">
+//                   <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-500 flex-shrink-0 mt-1" />
+//                   <div>
+//                     <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Continuous Learning</h4>
+//                     <p className="text-gray-600 text-sm sm:text-base">Regular training sessions and skill development programs</p>
+//                   </div>
+//                 </div>
+//                 <div className="flex items-start gap-3">
+//                   <Users className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500 flex-shrink-0 mt-1" />
+//                   <div>
+//                     <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Global Team</h4>
+//                     <p className="text-gray-600 text-sm sm:text-base">Collaborate with colleagues across UK, USA, and India</p>
+//                   </div>
+//                 </div>
+//                 <div className="flex items-start gap-3">
+//                   <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-green-500 flex-shrink-0 mt-1" />
+//                   <div>
+//                     <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Career Growth</h4>
+//                     <p className="text-gray-600 text-sm sm:text-base">Clear progression paths and promotion opportunities</p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Open Positions */}
+//       <section id="openings" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="text-center mb-8 sm:mb-12">
+//             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Current Open Positions</h2>
+//             <p className="text-base sm:text-lg text-gray-600">
+//               Explore opportunities to join our growing team across different departments
+//             </p>
+//           </div>
+
+//           {/* Department Filter */}
+//           <div className="flex flex-wrap justify-center gap-2 mb-6 sm:mb-8">
+//             {departments.map((department) => (
+//               <button
+//                 key={department}
+//                 onClick={() => setActiveTab(department)}
+//                 className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors ${
+//                   activeTab === department
+//                     ? 'bg-purple-600 text-white'
+//                     : 'bg-white text-gray-600 hover:bg-gray-100'
+//                 }`}
+//               >
+//                 {department === 'all' ? 'All Departments' : department}
+//               </button>
+//             ))}
+//           </div>
+
+//           <div className="max-w-6xl mx-auto space-y-4 sm:space-y-6">
+//             {filteredOpenings.map((opening, index) => (
+//               <Card key={index} className="hover:shadow-lg transition-all duration-300 border-l-4 border-l-purple-600">
+//                 <CardContent className="p-4 sm:p-6">
+//                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6">
+//                     <div className="flex-1">
+//                       <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-gray-900">{opening.title}</h3>
+//                       <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4">{opening.description}</p>
+                      
+//                       <div className="flex flex-wrap gap-2 sm:gap-3 mb-3 sm:mb-4">
+//                         <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
+//                           <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
+//                           {opening.location}
+//                         </div>
+//                         <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
+//                           <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+//                           {opening.type}
+//                         </div>
+//                         <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
+//                           <Briefcase className="h-3 w-3 sm:h-4 sm:w-4" />
+//                           {opening.experience} experience
+//                         </div>
+//                       </div>
+
+//                       <div className="flex flex-wrap gap-1 sm:gap-2">
+//                         {opening.tags.map((tag, tagIndex) => (
+//                           <span
+//                             key={tagIndex}
+//                             className="px-2 sm:px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs sm:text-sm"
+//                           >
+//                             {tag}
+//                           </span>
+//                         ))}
+//                       </div>
+//                     </div>
+//                     <div className="flex flex-col gap-2 sm:gap-3 mt-4 lg:mt-0">
+//                       <Link href="/contact">
+//                         <Button size="lg" className="w-full lg:w-auto text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
+//                           Apply Now
+//                         </Button>
+//                       </Link>
+//                       <Link href="/contact">
+//                         <Button variant="outline" size="lg" className="w-full lg:w-auto text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
+//                           Learn More
+//                         </Button>
+//                       </Link>
+//                     </div>
+//                   </div>
+//                 </CardContent>
+//               </Card>
+//             ))}
+//           </div>
+
+//           <div className="text-center mt-8 sm:mt-12">
+//             <div className="bg-white rounded-lg p-6 sm:p-8 max-w-2xl mx-auto">
+//               <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Don't See a Perfect Match?</h3>
+//               <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">
+//                 We're always looking for talented individuals who share our passion for recruitment and talent solutions.
+//                 Send us your resume and we'll keep you in mind for future opportunities.
+//               </p>
+//               <Link href="/contact">
+//                 <Button size="lg" variant="outline" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
+//                   Send Us Your Resume
+//                 </Button>
+//               </Link>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default Career;
+
+// // src/app/career/page.js
+// 'use client';
+// import React, { useState } from 'react';
+// import Link from 'next/link';
+// import { 
+//   Briefcase, 
+//   Heart, 
+//   TrendingUp, 
+//   Users, 
+//   MapPin, 
+//   Clock, 
+//   ArrowRight, 
+//   Star, 
+//   Target, 
+//   Zap,
+//   Sparkles,
+//   Rocket
+// } from 'lucide-react';
+// import { Button } from '@/components/ui/button';
+// import Header from '@/components/Header';
+// import Footer from '@/components/Footer';
+
+// // Simple Card components
+// const Card = ({ children, className = "", ...props }) => (
+//   <div className={`rounded-2xl md:rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-xl transition-all duration-500 ${className}`} {...props}>
+//     {children}
+//   </div>
+// );
+
+// const CardContent = ({ children, className = "", ...props }) => (
+//   <div className={`p-4 md:p-6 lg:p-8 ${className}`} {...props}>
+//     {children}
+//   </div>
+// );
+
+// // Animated Counter Component
+// const AnimatedCounter = ({ value, suffix = '', duration = 2000 }) => {
+//   const [count, setCount] = useState(0);
+
+//   React.useEffect(() => {
+//     const steps = 60;
+//     const increment = parseInt(value) / steps;
+//     let current = 0;
+//     let step = 0;
+
+//     const timer = setInterval(() => {
+//       step++;
+//       current = Math.min(increment * step, parseInt(value));
+//       setCount(Math.floor(current));
+      
+//       if (step >= steps) {
+//         clearInterval(timer);
+//       }
+//     }, duration / steps);
+
+//     return () => clearInterval(timer);
+//   }, [value, duration]);
+
+//   return <span className="font-bold">{count}{suffix}</span>;
+// };
+
+// const Career = () => {
+//   const [activeTab, setActiveTab] = useState('all');
+
+//   const benefits = [
+//     { icon: TrendingUp, title: 'Growth Opportunities', description: 'Continuous learning and career advancement in the recruitment industry', color: 'blue' },
+//     { icon: Users, title: 'Collaborative Culture', description: 'Work with a diverse, talented team across UK, USA, and India', color: 'green' },
+//     { icon: Heart, title: 'Work-Life Balance', description: 'Flexible arrangements and supportive environment', color: 'pink' },
+//     { icon: Briefcase, title: 'Meaningful Impact', description: 'Help shape careers and build successful organizations', color: 'purple' },
+//     { icon: Target, title: 'Clear Career Path', description: 'Structured progression with regular performance reviews', color: 'orange' },
+//     { icon: Zap, title: 'Cutting-Edge Tools', description: 'Access to latest recruitment technologies and AI tools', color: 'yellow' },
+//   ];
+
+//   const openings = [
+//     {
+//       title: 'Senior Recruitment Consultant',
+//       location: 'Orlando, FL / Remote',
+//       type: 'Full-time',
+//       department: 'RPO Services',
+//       experience: '3+ years',
+//       description: 'Join our growing RPO team and help UK/USA clients build exceptional teams. Manage end-to-end recruitment processes.',
+//       tags: ['RPO', 'Client Management', 'Full-Cycle Recruitment']
+//     },
+//     {
+//       title: 'IT Recruiter Specialist',
+//       location: 'Ahmedabad, India / Hybrid',
+//       type: 'Full-time',
+//       department: 'Career Services',
+//       experience: '2+ years',
+//       description: 'Support our Career Services division by connecting IT professionals with opportunities in the US market.',
+//       tags: ['IT Recruitment', 'US Market', 'Candidate Sourcing']
+//     },
+//     {
+//       title: 'Talent Sourcer',
+//       location: 'Remote',
+//       type: 'Full-time',
+//       department: 'Talent Acquisition',
+//       experience: '1+ years',
+//       description: 'Leverage your sourcing expertise to build talent pipelines for our global clients across multiple industries.',
+//       tags: ['Sourcing', 'Talent Pipeline', 'Market Research']
+//     },
+//     {
+//       title: 'Client Relationship Manager',
+//       location: 'Orlando, FL',
+//       type: 'Full-time',
+//       department: 'Business Development',
+//       experience: '4+ years',
+//       description: 'Build and maintain relationships with enterprise clients, understanding their talent needs and delivering solutions.',
+//       tags: ['Client Relations', 'Account Management', 'Strategic Planning']
+//     },
+//     {
+//       title: 'Recruitment Coordinator',
+//       location: 'Ahmedabad, India',
+//       type: 'Full-time',
+//       department: 'Operations',
+//       experience: '1+ years',
+//       description: 'Support recruitment operations by coordinating interviews, managing schedules, and ensuring smooth candidate experience.',
+//       tags: ['Coordination', 'Operations', 'Candidate Experience']
+//     },
+//     {
+//       title: 'Digital Marketing Specialist',
+//       location: 'Remote',
+//       type: 'Full-time',
+//       department: 'Marketing',
+//       experience: '2+ years',
+//       description: 'Drive our digital presence and employer branding initiatives across social media and professional networks.',
+//       tags: ['Digital Marketing', 'Employer Branding', 'Social Media']
+//     }
+//   ];
+
+//   const departments = ['all', 'RPO Services', 'Career Services', 'Business Development', 'Operations', 'Marketing', 'Talent Acquisition'];
+
+//   const filteredOpenings = activeTab === 'all' 
+//     ? openings 
+//     : openings.filter(opening => opening.department === activeTab);
+
+//   const colorClasses = {
+//     blue: 'bg-blue-100 text-blue-600',
+//     green: 'bg-green-100 text-green-600',
+//     pink: 'bg-pink-100 text-pink-600',
+//     purple: 'bg-purple-100 text-purple-600',
+//     orange: 'bg-orange-100 text-orange-600',
+//     yellow: 'bg-yellow-100 text-yellow-600'
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30">
+//       <Header />
+
+//       {/* Enhanced Hero Section */}
+//       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 pt-16 md:pt-20">
+        
+//         {/* Background Elements */}
+//         <div className="absolute inset-0 overflow-hidden">
+//           <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-96 md:h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+//           <div className="absolute bottom-1/4 right-1/4 w-40 h-40 md:w-80 md:h-80 bg-purple-500/15 rounded-full blur-3xl animate-pulse-slow delay-2000"></div>
+//           <div className="absolute top-1/2 left-1/2 w-32 h-32 md:w-64 md:h-64 bg-blue-500/10 rounded-full blur-2xl animate-pulse-slow delay-1000"></div>
+//         </div>
+
+//         <div className="relative container mx-auto px-4 sm:px-6 text-center space-y-6 md:space-y-8">
+//           <div className="space-y-6 md:space-y-8">
+            
+//             {/* Badge */}
+//             <div className="inline-flex items-center gap-2 md:gap-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl md:rounded-2xl px-4 py-2 md:px-6 md:py-4 mb-6 md:mb-8 shadow-2xl">
+//               <div className="flex items-center gap-1 md:gap-2">
+//                 <Sparkles className="h-4 w-4 md:h-5 md:w-5 text-yellow-400" />
+//                 <span className="text-white/90 text-xs md:text-sm font-semibold tracking-wide">
+//                   Join Our Team
+//                 </span>
+//               </div>
+//               <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+//               <div className="flex items-center gap-1 md:gap-2">
+//                 <Rocket className="h-3 w-3 md:h-4 md:w-4 text-cyan-400" />
+//                 <span className="text-white/70 text-xs">
+//                   Global Opportunities
+//                 </span>
+//               </div>
+//             </div>
+
+//             {/* Main Heading */}
+//             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4 md:mb-6">
+//               <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+//                 Build Your Career
+//               </span>
+//               <br />
+//               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+//                 At Novotion
+//               </span>
+//             </h1>
+
+//             {/* Subtitle */}
+//             <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-blue-100/90 max-w-3xl mx-auto leading-relaxed font-light px-4">
+//               Join a global recruitment powerhouse that's redefining how organizations and professionals connect across UK, USA, and India.
+//             </p>
+
+//             {/* CTA Buttons */}
+//             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center pt-6 md:pt-8">
+//               <Link href="#openings">
+//                 <Button 
+//                   size="lg" 
+//                   className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all text-sm md:text-base"
+//                 >
+//                   View Open Positions
+//                   <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
+//                 </Button>
+//               </Link>
+//               <Link href="/contact">
+//                 <Button 
+//                   size="lg" 
+//                   variant="outline" 
+//                   className="group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl transition-all text-sm md:text-base"
+//                 >
+//                   Send Your Resume
+//                 </Button>
+//               </Link>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Stats Section */}
+//       <section className="py-12 md:py-16 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+//             <div className="text-center">
+//               <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-cyan-400"><AnimatedCounter value="50" />+</div>
+//               <div className="text-blue-100 text-sm md:text-base">Team Members</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-blue-300"><AnimatedCounter value="3" /></div>
+//               <div className="text-blue-100 text-sm md:text-base">Continents</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-green-300"><AnimatedCounter value="15" />+</div>
+//               <div className="text-blue-100 text-sm md:text-base">Industries</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-purple-300"><AnimatedCounter value="500" />+</div>
+//               <div className="text-blue-100 text-sm md:text-base">Clients Served</div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Why Join Us */}
+//       <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-blue-50/30">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="text-center mb-8 md:mb-12 lg:mb-16">
+//             <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+//               Why Build Your Career <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">With Us?</span>
+//             </h2>
+//             <p className="text-gray-600 text-base md:text-lg lg:text-xl max-w-3xl mx-auto">
+//               We're more than just a recruitment company. We're a team committed to excellence, innovation, and making a real difference in people's careers.
+//             </p>
+//           </div>
+//           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
+//             {benefits.map((benefit, index) => (
+//               <Card key={index} className="hover-lift group border-blue-100/50 bg-gradient-to-br from-white to-blue-50/50">
+//                 <CardContent className="text-center space-y-4 md:space-y-6">
+//                   <div className={`h-12 w-12 md:h-16 md:w-16 rounded-xl md:rounded-2xl ${colorClasses[benefit.color]} flex items-center justify-center mx-auto group-hover:scale-110 transition-transform`}>
+//                     <benefit.icon className="h-6 w-6 md:h-8 md:w-8" />
+//                   </div>
+//                   <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900">{benefit.title}</h3>
+//                   <p className="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed">{benefit.description}</p>
+//                 </CardContent>
+//               </Card>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Our Culture */}
+//       <section className="py-12 md:py-16 lg:py-20 bg-white">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="max-w-6xl mx-auto">
+//             <div className="text-center mb-8 md:mb-12 lg:mb-16">
+//               <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+//                 Our Culture & <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Values</span>
+//               </h2>
+//               <p className="text-gray-600 text-base md:text-lg lg:text-xl max-w-3xl mx-auto">
+//                 At Novotion, we believe in integrity, excellence, commitment, innovation, and empowerment
+//               </p>
+//             </div>
+//             <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
+//               <div className="space-y-4 md:space-y-6 text-gray-600">
+//                 <p className="text-base md:text-lg lg:text-xl leading-relaxed">
+//                   Since 2021, we've built a reputation for being a trusted partner in recruitment. Our team spans three continents, working together to deliver exceptional results for clients and candidates alike.
+//                 </p>
+//                 <p className="text-base md:text-lg lg:text-xl leading-relaxed">
+//                   We invest in our people. From day one, you'll receive comprehensive training, ongoing mentorship, and opportunities to grow your skills. Whether you're passionate about RPO services, IT staffing, or talent strategy, you'll find a home at Novotion.
+//                 </p>
+//               </div>
+//               <div className="space-y-4 md:space-y-6">
+//                 <div className="flex items-start gap-4">
+//                   <div className="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+//                     <Star className="h-6 w-6 text-blue-600" />
+//                   </div>
+//                   <div>
+//                     <h4 className="font-bold text-gray-900 text-lg md:text-xl mb-2">Continuous Learning</h4>
+//                     <p className="text-gray-600 text-base md:text-lg">Regular training sessions and skill development programs</p>
+//                   </div>
+//                 </div>
+//                 <div className="flex items-start gap-4">
+//                   <div className="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+//                     <Users className="h-6 w-6 text-green-600" />
+//                   </div>
+//                   <div>
+//                     <h4 className="font-bold text-gray-900 text-lg md:text-xl mb-2">Global Team</h4>
+//                     <p className="text-gray-600 text-base md:text-lg">Collaborate with colleagues across UK, USA, and India</p>
+//                   </div>
+//                 </div>
+//                 <div className="flex items-start gap-4">
+//                   <div className="h-12 w-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+//                     <TrendingUp className="h-6 w-6 text-purple-600" />
+//                   </div>
+//                   <div>
+//                     <h4 className="font-bold text-gray-900 text-lg md:text-xl mb-2">Career Growth</h4>
+//                     <p className="text-gray-600 text-base md:text-lg">Clear progression paths and promotion opportunities</p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Open Positions */}
+//       <section id="openings" className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-slate-50/50 to-blue-50/50">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="text-center mb-8 md:mb-12 lg:mb-16">
+//             <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+//               Current <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Open Positions</span>
+//             </h2>
+//             <p className="text-gray-600 text-base md:text-lg lg:text-xl max-w-3xl mx-auto">
+//               Explore opportunities to join our growing team across different departments
+//             </p>
+//           </div>
+
+//           {/* Department Filter */}
+//           <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-12">
+//             {departments.map((department) => (
+//               <button
+//                 key={department}
+//                 onClick={() => setActiveTab(department)}
+//                 className={`px-4 py-2 md:px-6 md:py-3 rounded-xl font-semibold text-sm md:text-base backdrop-blur-sm hover:scale-105 transition-all ${
+//                   activeTab === department
+//                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
+//                     : 'bg-white/80 text-gray-600 hover:bg-white hover:text-blue-600 border border-gray-200'
+//                 }`}
+//               >
+//                 {department === 'all' ? 'All Departments' : department}
+//               </button>
+//             ))}
+//           </div>
+
+//           <div className="max-w-6xl mx-auto space-y-4 md:space-y-6">
+//             {filteredOpenings.map((opening, index) => (
+//               <Card key={index} className="hover-lift border-l-4 border-l-blue-600 bg-white/60 backdrop-blur-sm">
+//                 <CardContent className="p-4 md:p-6 lg:p-8">
+//                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 md:gap-6">
+//                     <div className="flex-1">
+//                       <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2 md:mb-3 text-gray-900">{opening.title}</h3>
+//                       <p className="text-gray-600 text-sm md:text-base lg:text-lg mb-3 md:mb-4 leading-relaxed">{opening.description}</p>
+                      
+//                       <div className="flex flex-wrap gap-3 md:gap-4 mb-3 md:mb-4">
+//                         <div className="flex items-center gap-2 text-sm md:text-base text-gray-500">
+//                           <MapPin className="h-4 w-4" />
+//                           {opening.location}
+//                         </div>
+//                         <div className="flex items-center gap-2 text-sm md:text-base text-gray-500">
+//                           <Clock className="h-4 w-4" />
+//                           {opening.type}
+//                         </div>
+//                         <div className="flex items-center gap-2 text-sm md:text-base text-gray-500">
+//                           <Briefcase className="h-4 w-4" />
+//                           {opening.experience} experience
+//                         </div>
+//                       </div>
+
+//                       <div className="flex flex-wrap gap-2 md:gap-3">
+//                         {opening.tags.map((tag, tagIndex) => (
+//                           <span
+//                             key={tagIndex}
+//                             className="px-3 py-1 md:px-4 md:py-2 bg-blue-100 text-blue-600 rounded-xl text-xs md:text-sm font-medium"
+//                           >
+//                             {tag}
+//                           </span>
+//                         ))}
+//                       </div>
+//                     </div>
+//                     <div className="flex flex-col gap-2 md:gap-3 mt-4 lg:mt-0 lg:w-auto">
+//                       <Link href="/contact">
+//                         <Button 
+//                           size="lg" 
+//                           className="group bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 px-4 md:px-6 py-2 md:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all text-sm md:text-base w-full lg:w-auto"
+//                         >
+//                           Apply Now
+//                           <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+//                         </Button>
+//                       </Link>
+//                       <Link href="/contact">
+//                         <Button 
+//                           variant="outline" 
+//                           size="lg" 
+//                           className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 md:px-6 py-2 md:py-3 rounded-xl transition-all text-sm md:text-base w-full lg:w-auto"
+//                         >
+//                           Learn More
+//                         </Button>
+//                       </Link>
+//                     </div>
+//                   </div>
+//                 </CardContent>
+//               </Card>
+//             ))}
+//           </div>
+
+//           <div className="text-center mt-8 md:mt-12 lg:mt-16">
+//             <Card className="max-w-2xl mx-auto bg-gradient-to-br from-blue-50 to-cyan-50/50 border-blue-200">
+//               <CardContent className="p-6 md:p-8 lg:p-10">
+//                 <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-gray-900">Don't See a Perfect Match?</h3>
+//                 <p className="text-gray-600 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
+//                   We're always looking for talented individuals who share our passion for recruitment and talent solutions.
+//                   Send us your resume and we'll keep you in mind for future opportunities.
+//                 </p>
+//                 <Link href="/contact">
+//                   <Button 
+//                     size="lg" 
+//                     variant="outline" 
+//                     className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 md:px-8 py-3 md:py-4 rounded-xl transition-all text-base md:text-lg"
+//                   >
+//                     Send Us Your Resume
+//                   </Button>
+//                 </Link>
+//               </CardContent>
+//             </Card>
+//           </div>
+//         </div>
+//       </section>
+
+//       <Footer />
+
+//       {/* Global Styles */}
+//       <style jsx global>{`
+//         @keyframes pulse-slow {
+//           0%, 100% { opacity: 0.3; }
+//           50% { opacity: 0.5; }
+//         }
+
+//         .animate-pulse-slow {
+//           animation: pulse-slow 4s infinite;
+//         }
+
+//         .hover-lift {
+//           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+//         }
+
+//         .hover-lift:hover {
+//           transform: translateY(-4px);
+//           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+//         }
+//       `}</style>
+//     </div>
+//   );
+// };
+
+// export default Career;
+
+// // src/app/career/page.js
+// 'use client';
+// import React, { useState } from 'react';
+// import Link from 'next/link';
+// import { 
+//   Briefcase, 
+//   Heart, 
+//   TrendingUp, 
+//   Users, 
+//   MapPin, 
+//   Clock, 
+//   ArrowRight, 
+//   Star, 
+//   Target, 
+//   Zap,
+//   Sparkles,
+//   Rocket
+// } from 'lucide-react';
+// import { Button } from '@/components/ui/button';
+// import Header from '@/components/Header';
+// import Footer from '@/components/Footer';
+
+// // Simple Card components
+// const Card = ({ children, className = "", ...props }) => (
+//   <div className={`rounded-lg sm:rounded-xl border border-gray-100 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-lg transition-all duration-300 ${className}`} {...props}>
+//     {children}
+//   </div>
+// );
+
+// const CardContent = ({ children, className = "", ...props }) => (
+//   <div className={`p-4 sm:p-6 ${className}`} {...props}>
+//     {children}
+//   </div>
+// );
+
+// // Animated Counter Component
+// const AnimatedCounter = ({ value, suffix = '', duration = 2000 }) => {
+//   const [count, setCount] = useState(0);
+
+//   React.useEffect(() => {
+//     const steps = 60;
+//     const increment = parseInt(value) / steps;
+//     let current = 0;
+//     let step = 0;
+
+//     const timer = setInterval(() => {
+//       step++;
+//       current = Math.min(increment * step, parseInt(value));
+//       setCount(Math.floor(current));
+      
+//       if (step >= steps) {
+//         clearInterval(timer);
+//       }
+//     }, duration / steps);
+
+//     return () => clearInterval(timer);
+//   }, [value, duration]);
+
+//   return <span className="font-bold">{count}{suffix}</span>;
+// };
+
+// const Career = () => {
+//   const [activeTab, setActiveTab] = useState('all');
+
+//   const benefits = [
+//     { icon: TrendingUp, title: 'Growth Opportunities', description: 'Continuous learning and career advancement in the recruitment industry', color: 'blue' },
+//     { icon: Users, title: 'Collaborative Culture', description: 'Work with a diverse, talented team across UK, USA, and India', color: 'green' },
+//     { icon: Heart, title: 'Work-Life Balance', description: 'Flexible arrangements and supportive environment', color: 'pink' },
+//     { icon: Briefcase, title: 'Meaningful Impact', description: 'Help shape careers and build successful organizations', color: 'purple' },
+//     { icon: Target, title: 'Clear Career Path', description: 'Structured progression with regular performance reviews', color: 'orange' },
+//     { icon: Zap, title: 'Cutting-Edge Tools', description: 'Access to latest recruitment technologies and AI tools', color: 'yellow' },
+//   ];
+
+//   const openings = [
+//     {
+//       title: 'Senior Recruitment Consultant',
+//       location: 'Orlando, FL / Remote',
+//       type: 'Full-time',
+//       department: 'RPO Services',
+//       experience: '3+ years',
+//       description: 'Join our growing RPO team and help UK/USA clients build exceptional teams. Manage end-to-end recruitment processes.',
+//       tags: ['RPO', 'Client Management', 'Full-Cycle Recruitment']
+//     },
+//     {
+//       title: 'IT Recruiter Specialist',
+//       location: 'Ahmedabad, India / Hybrid',
+//       type: 'Full-time',
+//       department: 'Career Services',
+//       experience: '2+ years',
+//       description: 'Support our Career Services division by connecting IT professionals with opportunities in the US market.',
+//       tags: ['IT Recruitment', 'US Market', 'Candidate Sourcing']
+//     },
+//     {
+//       title: 'Talent Sourcer',
+//       location: 'Remote',
+//       type: 'Full-time',
+//       department: 'Talent Acquisition',
+//       experience: '1+ years',
+//       description: 'Leverage your sourcing expertise to build talent pipelines for our global clients across multiple industries.',
+//       tags: ['Sourcing', 'Talent Pipeline', 'Market Research']
+//     },
+//     {
+//       title: 'Client Relationship Manager',
+//       location: 'Orlando, FL',
+//       type: 'Full-time',
+//       department: 'Business Development',
+//       experience: '4+ years',
+//       description: 'Build and maintain relationships with enterprise clients, understanding their talent needs and delivering solutions.',
+//       tags: ['Client Relations', 'Account Management', 'Strategic Planning']
+//     },
+//     {
+//       title: 'Recruitment Coordinator',
+//       location: 'Ahmedabad, India',
+//       type: 'Full-time',
+//       department: 'Operations',
+//       experience: '1+ years',
+//       description: 'Support recruitment operations by coordinating interviews, managing schedules, and ensuring smooth candidate experience.',
+//       tags: ['Coordination', 'Operations', 'Candidate Experience']
+//     },
+//     {
+//       title: 'Digital Marketing Specialist',
+//       location: 'Remote',
+//       type: 'Full-time',
+//       department: 'Marketing',
+//       experience: '2+ years',
+//       description: 'Drive our digital presence and employer branding initiatives across social media and professional networks.',
+//       tags: ['Digital Marketing', 'Employer Branding', 'Social Media']
+//     }
+//   ];
+
+//   const departments = ['all', 'RPO Services', 'Career Services', 'Business Development', 'Operations', 'Marketing', 'Talent Acquisition'];
+
+//   const filteredOpenings = activeTab === 'all' 
+//     ? openings 
+//     : openings.filter(opening => opening.department === activeTab);
+
+//   const colorClasses = {
+//     blue: 'bg-blue-100 text-blue-600',
+//     green: 'bg-green-100 text-green-600',
+//     pink: 'bg-pink-100 text-pink-600',
+//     purple: 'bg-purple-100 text-purple-600',
+//     orange: 'bg-orange-100 text-orange-600',
+//     yellow: 'bg-yellow-100 text-yellow-600'
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30">
+//       <Header />
+
+//       {/* Enhanced Hero Section - Consistent with Contact Page */}
+//       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 pt-16 md:pt-20">
+        
+//         {/* Background Elements */}
+//         <div className="absolute inset-0 overflow-hidden">
+//           <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-96 md:h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+//           <div className="absolute bottom-1/4 right-1/4 w-40 h-40 md:w-80 md:h-80 bg-purple-500/15 rounded-full blur-3xl animate-pulse-slow delay-2000"></div>
+//           <div className="absolute top-1/2 left-1/2 w-32 h-32 md:w-64 md:h-64 bg-blue-500/10 rounded-full blur-2xl animate-pulse-slow delay-1000"></div>
+//         </div>
+
+//         <div className="relative container mx-auto px-4 sm:px-6 text-center space-y-4 sm:space-y-6">
+//           <div className="space-y-4 sm:space-y-6">
+            
+//             {/* Badge */}
+//             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl px-4 py-2 mb-4 sm:mb-6 shadow-2xl">
+//               <div className="flex items-center gap-1">
+//                 <Sparkles className="h-4 w-4 text-yellow-400" />
+//                 <span className="text-white/90 text-xs font-semibold tracking-wide">
+//                   Join Our Team
+//                 </span>
+//               </div>
+//               <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+//               <div className="flex items-center gap-1">
+//                 <Rocket className="h-3 w-3 text-cyan-400" />
+//                 <span className="text-white/70 text-xs">
+//                   Global Opportunities
+//                 </span>
+//               </div>
+//             </div>
+
+//             {/* Main Heading */}
+//             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight">
+//               <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+//                 Build Your Career at Novotion
+//               </span>
+//             </h1>
+
+//             {/* Subtitle */}
+//             <p className="text-lg sm:text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto px-4">
+//               Join a global recruitment powerhouse that's redefining how organizations and professionals connect across UK, USA, and India.
+//             </p>
+
+//             {/* CTA Buttons */}
+//             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-6">
+//               <Link href="#openings">
+//                 <Button 
+//                   size="lg" 
+//                   className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-sm sm:text-base"
+//                 >
+//                   View Open Positions
+//                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+//                 </Button>
+//               </Link>
+//               <Link href="/contact">
+//                 <Button 
+//                   size="lg" 
+//                   variant="outline" 
+//                   className="group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all text-sm sm:text-base"
+//                 >
+//                   Send Your Resume
+//                 </Button>
+//               </Link>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Stats Section */}
+//       <section className="py-8 sm:py-12 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
+//             <div className="text-center">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-cyan-400"><AnimatedCounter value="50" />+</div>
+//               <div className="text-blue-100 text-xs sm:text-sm">Team Members</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-blue-300"><AnimatedCounter value="3" /></div>
+//               <div className="text-blue-100 text-xs sm:text-sm">Continents</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-green-300"><AnimatedCounter value="15" />+</div>
+//               <div className="text-blue-100 text-xs sm:text-sm">Industries</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-purple-300"><AnimatedCounter value="500" />+</div>
+//               <div className="text-blue-100 text-xs sm:text-sm">Clients Served</div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Why Join Us */}
+//       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-blue-50/30">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="text-center mb-8 sm:mb-12">
+//             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Why Build Your Career With Us?</h2>
+//             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+//               We're more than just a recruitment company. We're a team committed to excellence, innovation, and making a real difference in people's careers.
+//             </p>
+//           </div>
+//           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
+//             {benefits.map((benefit, index) => (
+//               <Card key={index} className="hover-lift group border-l-4 border-l-blue-600 bg-gradient-to-br from-white to-blue-50/50">
+//                 <CardContent className="text-center space-y-3 sm:space-y-4">
+//                   <div className={`h-10 w-10 sm:h-12 sm:w-12 rounded-lg ${colorClasses[benefit.color]} flex items-center justify-center mx-auto group-hover:scale-110 transition-transform`}>
+//                     <benefit.icon className="h-5 w-5 sm:h-6 sm:w-6" />
+//                   </div>
+//                   <h3 className="text-lg sm:text-xl font-bold text-gray-900">{benefit.title}</h3>
+//                   <p className="text-gray-600 text-sm sm:text-base">{benefit.description}</p>
+//                 </CardContent>
+//               </Card>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Our Culture */}
+//       <section className="py-12 sm:py-16 md:py-20 bg-white">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="max-w-5xl mx-auto">
+//             <div className="text-center mb-8 sm:mb-12">
+//               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Our Culture & Values</h2>
+//               <p className="text-base sm:text-lg text-gray-600">
+//                 At Novotion, we believe in integrity, excellence, commitment, innovation, and empowerment
+//               </p>
+//             </div>
+//             <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+//               <div className="space-y-4 sm:space-y-6 text-gray-600">
+//                 <p className="text-base sm:text-lg leading-relaxed">
+//                   Since 2021, we've built a reputation for being a trusted partner in recruitment. Our team spans three continents, working together to deliver exceptional results for clients and candidates alike.
+//                 </p>
+//                 <p className="text-base sm:text-lg leading-relaxed">
+//                   We invest in our people. From day one, you'll receive comprehensive training, ongoing mentorship, and opportunities to grow your skills. Whether you're passionate about RPO services, IT staffing, or talent strategy, you'll find a home at Novotion.
+//                 </p>
+//               </div>
+//               <div className="space-y-4 sm:space-y-6">
+//                 <div className="flex items-start gap-3">
+//                   <div className="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+//                     <Star className="h-5 w-5 text-blue-600" />
+//                   </div>
+//                   <div>
+//                     <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Continuous Learning</h4>
+//                     <p className="text-gray-600 text-sm sm:text-base">Regular training sessions and skill development programs</p>
+//                   </div>
+//                 </div>
+//                 <div className="flex items-start gap-3">
+//                   <div className="h-10 w-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+//                     <Users className="h-5 w-5 text-green-600" />
+//                   </div>
+//                   <div>
+//                     <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Global Team</h4>
+//                     <p className="text-gray-600 text-sm sm:text-base">Collaborate with colleagues across UK, USA, and India</p>
+//                   </div>
+//                 </div>
+//                 <div className="flex items-start gap-3">
+//                   <div className="h-10 w-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+//                     <TrendingUp className="h-5 w-5 text-purple-600" />
+//                   </div>
+//                   <div>
+//                     <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Career Growth</h4>
+//                     <p className="text-gray-600 text-sm sm:text-base">Clear progression paths and promotion opportunities</p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Open Positions */}
+//       <section id="openings" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-slate-50/50 to-blue-50/50">
+//         <div className="container mx-auto px-4 sm:px-6">
+//           <div className="text-center mb-8 sm:mb-12">
+//             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Current Open Positions</h2>
+//             <p className="text-base sm:text-lg text-gray-600">
+//               Explore opportunities to join our growing team across different departments
+//             </p>
+//           </div>
+
+//           {/* Department Filter */}
+//           <div className="flex flex-wrap justify-center gap-2 mb-6 sm:mb-8">
+//             {departments.map((department) => (
+//               <button
+//                 key={department}
+//                 onClick={() => setActiveTab(department)}
+//                 className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors ${
+//                   activeTab === department
+//                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
+//                     : 'bg-white/80 text-gray-600 hover:bg-white hover:text-blue-600 border border-gray-200'
+//                 }`}
+//               >
+//                 {department === 'all' ? 'All Departments' : department}
+//               </button>
+//             ))}
+//           </div>
+
+//           <div className="max-w-6xl mx-auto space-y-4 sm:space-y-6">
+//             {filteredOpenings.map((opening, index) => (
+//               <Card key={index} className="hover-lift border-l-4 border-l-blue-600 bg-white/60 backdrop-blur-sm">
+//                 <CardContent className="p-4 sm:p-6">
+//                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6">
+//                     <div className="flex-1">
+//                       <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-gray-900">{opening.title}</h3>
+//                       <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4">{opening.description}</p>
+                      
+//                       <div className="flex flex-wrap gap-2 sm:gap-3 mb-3 sm:mb-4">
+//                         <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
+//                           <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
+//                           {opening.location}
+//                         </div>
+//                         <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
+//                           <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+//                           {opening.type}
+//                         </div>
+//                         <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-500">
+//                           <Briefcase className="h-3 w-3 sm:h-4 sm:w-4" />
+//                           {opening.experience} experience
+//                         </div>
+//                       </div>
+
+//                       <div className="flex flex-wrap gap-1 sm:gap-2">
+//                         {opening.tags.map((tag, tagIndex) => (
+//                           <span
+//                             key={tagIndex}
+//                             className="px-2 sm:px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs sm:text-sm"
+//                           >
+//                             {tag}
+//                           </span>
+//                         ))}
+//                       </div>
+//                     </div>
+//                     <div className="flex flex-col gap-2 sm:gap-3 mt-4 lg:mt-0">
+//                       <Link href="/contact">
+//                         <Button 
+//                           size="lg" 
+//                           className="group bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg hover:shadow-xl transition-all text-sm sm:text-base w-full lg:w-auto"
+//                         >
+//                           Apply Now
+//                           <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+//                         </Button>
+//                       </Link>
+//                       <Link href="/contact">
+//                         <Button 
+//                           variant="outline" 
+//                           size="lg" 
+//                           className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all text-sm sm:text-base w-full lg:w-auto"
+//                         >
+//                           Learn More
+//                         </Button>
+//                       </Link>
+//                     </div>
+//                   </div>
+//                 </CardContent>
+//               </Card>
+//             ))}
+//           </div>
+
+//           <div className="text-center mt-8 sm:mt-12">
+//             <Card className="max-w-2xl mx-auto bg-gradient-to-br from-blue-50 to-cyan-50/50 border-blue-200">
+//               <CardContent className="p-6 sm:p-8">
+//                 <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-900">Don't See a Perfect Match?</h3>
+//                 <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">
+//                   We're always looking for talented individuals who share our passion for recruitment and talent solutions.
+//                   Send us your resume and we'll keep you in mind for future opportunities.
+//                 </p>
+//                 <Link href="/contact">
+//                   <Button 
+//                     size="lg" 
+//                     variant="outline" 
+//                     className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all text-sm sm:text-base"
+//                   >
+//                     Send Us Your Resume
+//                   </Button>
+//                 </Link>
+//               </CardContent>
+//             </Card>
+//           </div>
+//         </div>
+//       </section>
+
+//       <Footer />
+
+//       {/* Global Styles */}
+//       <style jsx global>{`
+//         @keyframes pulse-slow {
+//           0%, 100% { opacity: 0.3; }
+//           50% { opacity: 0.5; }
+//         }
+
+//         .animate-pulse-slow {
+//           animation: pulse-slow 4s infinite;
+//         }
+
+//         .hover-lift {
+//           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+//         }
+
+//         .hover-lift:hover {
+//           transform: translateY(-4px);
+//           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+//         }
+//       `}</style>
+//     </div>
+//   );
+// };
+
+// export default Career;
+
+
+// src/app/career/page.js
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Briefcase, Heart, TrendingUp, Users, MapPin, Clock, ArrowRight, Star, Target, Zap } from 'lucide-react';
+import { 
+  Briefcase, 
+  Heart, 
+  TrendingUp, 
+  Users, 
+  MapPin, 
+  Clock, 
+  ArrowRight, 
+  Star, 
+  Target, 
+  Zap,
+  Sparkles,
+  Rocket,
+  Globe,
+  Award,
+  BookOpen
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 // Simple Card components
 const Card = ({ children, className = "", ...props }) => (
-  <div className={`rounded-lg sm:rounded-xl border bg-white shadow-sm hover:shadow-lg transition-all duration-300 ${className}`} {...props}>
+  <div className={`rounded-lg sm:rounded-xl border border-gray-100 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-lg transition-all duration-300 ${className}`} {...props}>
     {children}
   </div>
 );
@@ -413,72 +1717,54 @@ const Career = () => {
   const [activeTab, setActiveTab] = useState('all');
 
   const benefits = [
-    { icon: TrendingUp, title: 'Growth Opportunities', description: 'Continuous learning and career advancement in the recruitment industry', color: 'blue' },
-    { icon: Users, title: 'Collaborative Culture', description: 'Work with a diverse, talented team across UK, USA, and India', color: 'green' },
-    { icon: Heart, title: 'Work-Life Balance', description: 'Flexible arrangements and supportive environment', color: 'pink' },
-    { icon: Briefcase, title: 'Meaningful Impact', description: 'Help shape careers and build successful organizations', color: 'purple' },
-    { icon: Target, title: 'Clear Career Path', description: 'Structured progression with regular performance reviews', color: 'orange' },
-    { icon: Zap, title: 'Cutting-Edge Tools', description: 'Access to latest recruitment technologies and AI tools', color: 'yellow' },
+    { icon: TrendingUp, title: 'Grow With Us', description: 'Continuous learning and career advancement opportunities in the fast-paced recruitment industry and talent acquisition field', color: 'green' },
+    { icon: Globe, title: 'Global Team, Unified Mission', description: 'Work with a diverse, talented team across the UK, USA, and India—bringing together the best minds in recruitment and career support from around the world', color: 'blue' },
+    { icon: Heart, title: 'Work-Life Balance', description: 'Flexible work arrangements and a supportive environment in our recruitment operations that respects your personal life', color: 'pink' },
+    { icon: Target, title: 'Make an Impact', description: 'Help shape careers and build successful organizations through talent acquisition. Your work in recruitment directly changes lives', color: 'purple' },
+    { icon: Award, title: 'Clear Career Progression', description: 'Structured advancement paths in recruitment with regular performance reviews and promotion opportunities in RPO services', color: 'orange' },
+    { icon: Zap, title: 'Cutting-Edge Tools', description: 'Access to the latest recruitment technologies, AI-powered tools, and industry-leading platforms for talent acquisition', color: 'yellow' },
   ];
 
   const openings = [
     {
-      title: 'Senior Recruitment Consultant',
-      location: 'Orlando, FL / Remote',
-      type: 'Full-time',
-      department: 'RPO Services',
-      experience: '3+ years',
-      description: 'Join our growing RPO team and help UK/USA clients build exceptional teams. Manage end-to-end recruitment processes.',
-      tags: ['RPO', 'Client Management', 'Full-Cycle Recruitment']
-    },
-    {
-      title: 'IT Recruiter Specialist',
-      location: 'Ahmedabad, India / Hybrid',
-      type: 'Full-time',
+      title: 'Recruitment Consultant',
+      location: 'Ahmedabad, India',
+      type: 'Full-Time',
       department: 'Career Services',
       experience: '2+ years',
-      description: 'Support our Career Services division by connecting IT professionals with opportunities in the US market.',
-      tags: ['IT Recruitment', 'US Market', 'Candidate Sourcing']
+      description: 'Help clients build exceptional teams through talent acquisition and support professionals in advancing their careers with our recruitment services.',
+      tags: ['Talent Acquisition', 'Career Support', 'Client Management']
     },
     {
-      title: 'Talent Sourcer',
-      location: 'Remote',
-      type: 'Full-time',
-      department: 'Talent Acquisition',
-      experience: '1+ years',
-      description: 'Leverage your sourcing expertise to build talent pipelines for our global clients across multiple industries.',
-      tags: ['Sourcing', 'Talent Pipeline', 'Market Research']
+      title: 'RPO Specialist',
+      location: 'Orlando, USA',
+      type: 'Full-Time',
+      department: 'RPO Services',
+      experience: '3+ years',
+      description: 'Manage end-to-end recruitment processes and talent acquisition for our U.S.-based clients through comprehensive RPO services.',
+      tags: ['RPO', 'Full-Cycle Recruitment', 'US Market']
     },
     {
-      title: 'Client Relationship Manager',
-      location: 'Orlando, FL',
-      type: 'Full-time',
-      department: 'Business Development',
-      experience: '4+ years',
-      description: 'Build and maintain relationships with enterprise clients, understanding their talent needs and delivering solutions.',
-      tags: ['Client Relations', 'Account Management', 'Strategic Planning']
-    },
-    {
-      title: 'Recruitment Coordinator',
+      title: 'Career Support Specialist',
       location: 'Ahmedabad, India',
-      type: 'Full-time',
-      department: 'Operations',
+      type: 'Full-Time',
+      department: 'Career Services',
       experience: '1+ years',
-      description: 'Support recruitment operations by coordinating interviews, managing schedules, and ensuring smooth candidate experience.',
-      tags: ['Coordination', 'Operations', 'Candidate Experience']
+      description: 'Guide IT professionals through the U.S. contract market and help them land their next role using career support services and bench sales expertise.',
+      tags: ['Career Support', 'Bench Sales', 'IT Professionals']
     },
     {
-      title: 'Digital Marketing Specialist',
-      location: 'Remote',
-      type: 'Full-time',
-      department: 'Marketing',
-      experience: '2+ years',
-      description: 'Drive our digital presence and employer branding initiatives across social media and professional networks.',
-      tags: ['Digital Marketing', 'Employer Branding', 'Social Media']
+      title: 'Talent Acquisition Manager',
+      location: 'UK (Remote)',
+      type: 'Full-Time',
+      department: 'RPO Services',
+      experience: '4+ years',
+      description: 'Lead recruitment strategy for our UK clients and mentor junior team members in talent acquisition and RPO services.',
+      tags: ['Strategy', 'Team Leadership', 'Client Relations']
     }
   ];
 
-  const departments = ['all', 'RPO Services', 'Career Services', 'Business Development', 'Operations', 'Marketing', 'Talent Acquisition'];
+  const departments = ['all', 'RPO Services', 'Career Services', 'Business Development'];
 
   const filteredOpenings = activeTab === 'all' 
     ? openings 
@@ -493,29 +1779,111 @@ const Career = () => {
     yellow: 'bg-yellow-100 text-yellow-600'
   };
 
+  const teamTestimonials = [
+    {
+      quote: "Working at Novotion has been transformational for my career in recruitment. The support, mentorship, and opportunities for growth in talent acquisition are unmatched.",
+      name: "Sarah M.",
+      role: "Recruitment Consultant"
+    },
+    {
+      quote: "I love the global collaboration in recruitment. I learn something new every day about talent acquisition from my colleagues across different time zones and cultures.",
+      name: "Raj P.",
+      role: "Career Support Specialist"
+    }
+  ];
+
+  const values = [
+    {
+      icon: Star,
+      title: "Integrity",
+      description: "Honest and ethical practices in all recruitment activities"
+    },
+    {
+      icon: Award,
+      title: "Excellence",
+      description: "Striving for the highest standards in talent acquisition"
+    },
+    {
+      icon: Target,
+      title: "Commitment",
+      description: "Dedicated to delivering exceptional recruitment results"
+    },
+    {
+      icon: Zap,
+      title: "Innovation",
+      description: "Embracing new technologies and methods in RPO services"
+    },
+    {
+      icon: Users,
+      title: "Empowerment",
+      description: "Enabling growth and development in career support"
+    }
+  ];
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30">
       <Header />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 to-blue-600 text-white py-12 sm:py-16 md:py-20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
-              Build Your Career at Novotion
+      {/* Enhanced Hero Section */}
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 pt-16 md:pt-20">
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-96 md:h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-40 h-40 md:w-80 md:h-80 bg-purple-500/15 rounded-full blur-3xl animate-pulse-slow delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 w-32 h-32 md:w-64 md:h-64 bg-blue-500/10 rounded-full blur-2xl animate-pulse-slow delay-1000"></div>
+        </div>
+
+        <div className="relative container mx-auto px-4 sm:px-6 text-center space-y-4 sm:space-y-6">
+          <div className="space-y-4 sm:space-y-6">
+            
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl px-4 py-2 mb-4 sm:mb-6 shadow-2xl">
+              <div className="flex items-center gap-1">
+                <Sparkles className="h-4 w-4 text-yellow-400" />
+                <span className="text-white/90 text-xs font-semibold tracking-wide">
+                  Join Our Team
+                </span>
+              </div>
+              <div className="w-1 h-1 bg-white/40 rounded-full"></div>
+              <div className="flex items-center gap-1">
+                <Rocket className="h-3 w-3 text-cyan-400" />
+                <span className="text-white/70 text-xs">
+                  Global Opportunities
+                </span>
+              </div>
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight">
+              <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                Build Your Career With Novotion
+              </span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-purple-100 leading-relaxed">
-              Join a global recruitment powerhouse that's redefining how organizations and professionals connect
+
+            {/* Subtitle */}
+            <p className="text-lg sm:text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto px-4">
+              We're more than just a recruitment company. We're a team committed to excellence in talent acquisition, innovation in RPO services, and making a real difference in people's careers.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4">
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-6">
               <Link href="#openings">
-                <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
-                  View Open Positions <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <Button 
+                  size="lg" 
+                  className="group bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-500 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all text-sm sm:text-base"
+                >
+                  View Open Positions
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-purple-600 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
-                  Send Your Resume
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all text-sm sm:text-base"
+                >
+                  Contact Our HR Team
                 </Button>
               </Link>
             </div>
@@ -524,44 +1892,44 @@ const Career = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-8 sm:py-12 bg-white">
+      <section className="py-8 sm:py-12 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-purple-600"><AnimatedCounter value="50" />+</div>
-              <div className="text-gray-600 text-xs sm:text-sm">Team Members</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-cyan-400"><AnimatedCounter value="50" />+</div>
+              <div className="text-blue-100 text-xs sm:text-sm">Team Members</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-blue-600"><AnimatedCounter value="3" /></div>
-              <div className="text-gray-600 text-xs sm:text-sm">Continents</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-blue-300"><AnimatedCounter value="3" /></div>
+              <div className="text-blue-100 text-xs sm:text-sm">Continents</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-green-600"><AnimatedCounter value="15" />+</div>
-              <div className="text-gray-600 text-xs sm:text-sm">Industries</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-green-300"><AnimatedCounter value="15" />+</div>
+              <div className="text-blue-100 text-xs sm:text-sm">Industries</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-orange-600"><AnimatedCounter value="500" />+</div>
-              <div className="text-gray-600 text-xs sm:text-sm">Clients Served</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-purple-300"><AnimatedCounter value="500" />+</div>
+              <div className="text-blue-100 text-xs sm:text-sm">Clients Served</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Join Us */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      {/* Why Work at Novotion */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-blue-50/30">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Why Build Your Career With Us?</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Why Work at Novotion?</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              We're more than just a recruitment company. We're a team committed to excellence, innovation, and making a real difference in people's careers.
+              We're building a workplace where talent acquisition professionals can thrive and make a real impact in people's careers.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 group">
-                <CardContent className="space-y-3 text-center">
-                  <div className={`h-12 w-12 sm:h-16 sm:w-16 rounded-xl sm:rounded-2xl ${colorClasses[benefit.color]} flex items-center justify-center mx-auto group-hover:scale-105 sm:group-hover:scale-110 transition-transform`}>
-                    <benefit.icon className="h-6 w-6 sm:h-8 sm:w-8" />
+              <Card key={index} className="hover-lift group border-l-4 border-l-blue-600 bg-gradient-to-br from-white to-blue-50/50">
+                <CardContent className="text-center space-y-3 sm:space-y-4">
+                  <div className={`h-10 w-10 sm:h-12 sm:w-12 rounded-lg ${colorClasses[benefit.color]} flex items-center justify-center mx-auto group-hover:scale-110 transition-transform`}>
+                    <benefit.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900">{benefit.title}</h3>
                   <p className="text-gray-600 text-sm sm:text-base">{benefit.description}</p>
@@ -572,45 +1940,94 @@ const Career = () => {
         </div>
       </section>
 
-      {/* Our Culture */}
+      {/* Our Core Values */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Our Culture & Values</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Our Core Values</h2>
               <p className="text-base sm:text-lg text-gray-600">
-                At Novotion, we believe in integrity, excellence, commitment, innovation, and empowerment
+                At Novotion, we believe in Integrity, Excellence, Commitment, Innovation, and Empowerment in everything related to recruitment and career development.
+              </p>
+              <p className="text-sm sm:text-base text-gray-500 mt-2">
+                These aren't just buzzwords—they're the foundation of our recruitment culture and how we approach talent acquisition every day.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-              <div className="space-y-4 sm:space-y-6 text-gray-600">
-                <p className="text-base sm:text-lg leading-relaxed">
-                  Since 2021, we've built a reputation for being a trusted partner in recruitment. Our team spans three continents, working together to deliver exceptional results for clients and candidates alike.
-                </p>
-                <p className="text-base sm:text-lg leading-relaxed">
-                  We invest in our people. From day one, you'll receive comprehensive training, ongoing mentorship, and opportunities to grow your skills. Whether you're passionate about RPO services, IT staffing, or talent strategy, you'll find a home at Novotion.
-                </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+              {values.map((value, index) => (
+                <Card key={index} className="text-center hover-lift">
+                  <CardContent className="space-y-3">
+                    <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto">
+                      <value.icon className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-base">{value.title}</h3>
+                    <p className="text-gray-600 text-sm">{value.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Novotion & What You'll Experience */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
+              
+              {/* About Novotion */}
+              <div>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">About Novotion</h2>
+                <div className="space-y-4 text-gray-600">
+                  <p className="text-base sm:text-lg leading-relaxed">
+                    Since 2021, we've built a reputation for being a trusted partner in recruitment and career support services. Our team spans three continents, working together to deliver exceptional talent acquisition results for clients and candidates alike.
+                  </p>
+                  <p className="text-base sm:text-lg leading-relaxed">
+                    We invest in our people in recruitment. From day one, you'll receive comprehensive training in RPO services, ongoing mentorship in talent acquisition, and opportunities to grow your skills in recruitment. Whether you're passionate about hiring, IT staffing, or talent strategy, you'll find a home at Novotion.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-4 sm:space-y-6">
-                <div className="flex items-start gap-3">
-                  <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-500 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Continuous Learning</h4>
-                    <p className="text-gray-600 text-sm sm:text-base">Regular training sessions and skill development programs</p>
+
+              {/* What You'll Experience */}
+              <div>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">What You'll Experience</h2>
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="flex items-start gap-3">
+                    <div className="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <BookOpen className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Comprehensive Training</h4>
+                      <p className="text-gray-600 text-sm sm:text-base">Regular training sessions and skill development programs in recruitment to keep you at the top of your talent acquisition game.</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Users className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Global Team</h4>
-                    <p className="text-gray-600 text-sm sm:text-base">Collaborate with colleagues across UK, USA, and India</p>
+                  <div className="flex items-start gap-3">
+                    <div className="h-10 w-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Users className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Global Collaboration</h4>
+                      <p className="text-gray-600 text-sm sm:text-base">Collaborate with recruitment colleagues across the UK, USA, and India, learning from diverse perspectives in talent acquisition and career support.</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-green-500 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Career Growth</h4>
-                    <p className="text-gray-600 text-sm sm:text-base">Clear progression paths and promotion opportunities</p>
+                  <div className="flex items-start gap-3">
+                    <div className="h-10 w-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <TrendingUp className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Clear Career Paths</h4>
+                      <p className="text-gray-600 text-sm sm:text-base">Transparent progression paths and promotion opportunities in recruitment based on merit and performance in RPO services.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="h-10 w-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Award className="h-5 w-5 text-orange-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Recognition & Rewards</h4>
+                      <p className="text-gray-600 text-sm sm:text-base">Your hard work in talent acquisition doesn't go unnoticed. We celebrate wins in recruitment, big and small.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -619,13 +2036,43 @@ const Career = () => {
         </div>
       </section>
 
-      {/* Open Positions */}
-      <section id="openings" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      {/* Team Testimonials */}
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Current Open Positions</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">What Our Team Says</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            {teamTestimonials.map((testimonial, index) => (
+              <Card key={index} className="hover-lift border-l-4 border-l-blue-600">
+                <CardContent className="space-y-4">
+                  <div className="flex items-center gap-1 text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 text-base italic">"{testimonial.quote}"</p>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-blue-600 text-sm">{testimonial.role}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Open Positions */}
+      <section id="openings" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-slate-50/50 to-blue-50/50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Open Positions</h2>
             <p className="text-base sm:text-lg text-gray-600">
-              Explore opportunities to join our growing team across different departments
+              Explore Opportunities to Join Our Growing Team
+            </p>
+            <p className="text-sm sm:text-base text-gray-500 mt-2">
+              We're always looking for talented individuals who share our passion for connecting people with career opportunities through innovative recruitment solutions.
             </p>
           </div>
 
@@ -637,8 +2084,8 @@ const Career = () => {
                 onClick={() => setActiveTab(department)}
                 className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors ${
                   activeTab === department
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
+                    : 'bg-white/80 text-gray-600 hover:bg-white hover:text-blue-600 border border-gray-200'
                 }`}
               >
                 {department === 'all' ? 'All Departments' : department}
@@ -646,9 +2093,9 @@ const Career = () => {
             ))}
           </div>
 
-          <div className="max-w-6xl mx-auto space-y-4 sm:space-y-6">
+          <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6">
             {filteredOpenings.map((opening, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-l-4 border-l-purple-600">
+              <Card key={index} className="hover-lift border-l-4 border-l-blue-600 bg-white/60 backdrop-blur-sm">
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6">
                     <div className="flex-1">
@@ -683,13 +2130,12 @@ const Career = () => {
                     </div>
                     <div className="flex flex-col gap-2 sm:gap-3 mt-4 lg:mt-0">
                       <Link href="/contact">
-                        <Button size="lg" className="w-full lg:w-auto text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
+                        <Button 
+                          size="lg" 
+                          className="group bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg hover:shadow-xl transition-all text-sm sm:text-base w-full lg:w-auto"
+                        >
                           Apply Now
-                        </Button>
-                      </Link>
-                      <Link href="/contact">
-                        <Button variant="outline" size="lg" className="w-full lg:w-auto text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
-                          Learn More
+                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Button>
                       </Link>
                     </div>
@@ -700,15 +2146,53 @@ const Career = () => {
           </div>
 
           <div className="text-center mt-8 sm:mt-12">
-            <div className="bg-white rounded-lg p-6 sm:p-8 max-w-2xl mx-auto">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Don't See a Perfect Match?</h3>
-              <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">
-                We're always looking for talented individuals who share our passion for recruitment and talent solutions.
-                Send us your resume and we'll keep you in mind for future opportunities.
-              </p>
+            <Card className="max-w-2xl mx-auto bg-gradient-to-br from-blue-50 to-cyan-50/50 border-blue-200">
+              <CardContent className="p-6 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-900">Don't See the Right Role?</h3>
+                <p className="text-gray-600 text-sm sm:text-base mb-4 sm:mb-6">
+                  We're always interested in hearing from talented professionals passionate about recruitment and career development. Send us your resume and let us know how you'd like to contribute to Novotion's talent acquisition mission.
+                </p>
+                <Link href="/contact">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all text-sm sm:text-base"
+                  >
+                    Submit Your Resume
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Call to Action */}
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              Ready to Join the Novotion Team?
+            </h2>
+            <p className="text-lg sm:text-xl text-blue-100">
+              Take the next step in your career in recruitment. Explore our open positions in talent acquisition and career support or reach out to learn more about life at Novotion.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Link href="#openings">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
+                >
+                  View Open Positions
+                </Button>
+              </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4">
-                  Send Us Your Resume
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all text-sm sm:text-base"
+                >
+                  Contact Our HR Team
                 </Button>
               </Link>
             </div>
@@ -717,6 +2201,27 @@ const Career = () => {
       </section>
 
       <Footer />
+
+      {/* Global Styles */}
+      <style jsx global>{`
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.5; }
+        }
+
+        .animate-pulse-slow {
+          animation: pulse-slow 4s infinite;
+        }
+
+        .hover-lift {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+      `}</style>
     </div>
   );
 };
