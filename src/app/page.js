@@ -584,7 +584,7 @@ const Home = () => {
               <div className="space-y-4 md:space-y-6 observe text-center lg:text-left">
                 <div className="space-y-4">
                   <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                    At Novotion, we don't just fill positions—we deliver comprehensive recruitment process outsourcing that transforms how you hire. Whether you're a growing company searching for strategic talent acquisition solutions or a skilled IT professional ready for your next contract opportunity, we're here to make it happen.
+                    At Novotion, we don't just fill positions, we deliver comprehensive recruitment process outsourcing that transforms how you hire. Whether you're a growing company searching for strategic talent acquisition solutions or a skilled IT professional ready for your next contract opportunity, we're here to make it happen.
                   </p>
                 </div>
                 
@@ -654,7 +654,7 @@ const Home = () => {
       <TrustedBySection />
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 lg:min-h-[80vh] flex items-center bg-primary text-white relative overflow-hidden">
+      {/* <section className="py-12 md:py-20 lg:min-h-[80vh] flex items-center bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-48 h-48 md:w-72 md:h-72 bg-white/10 rounded-full mix-blend-soft-light filter blur-3xl animate-float"></div>
           <div className="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-secondary/20 rounded-full mix-blend-soft-light filter blur-3xl animate-float-delayed"></div>
@@ -712,7 +712,127 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* CTA Section */}
+{/* <section className="py-12 md:py-20 lg:min-h-[80vh] flex items-center bg-primary text-white relative overflow-hidden">
+  <div className="absolute inset-0">
+    <div className="absolute top-0 left-0 w-48 h-48 md:w-72 md:h-72 bg-white/10 rounded-full mix-blend-soft-light filter blur-3xl animate-float"></div>
+    <div className="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-secondary/20 rounded-full mix-blend-soft-light filter blur-3xl animate-float-delayed"></div>
+  </div>
+  
+  <div className="relative container mx-auto px-4 md:px-6 py-8 md:py-16 text-center">
+    <div className="max-w-3xl mx-auto">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">
+        Ready to Make Your
+        <span className="block text-secondary mt-1 md:mt-2">
+          Next Move?
+        </span>
+      </h2>
+      
+      <p className="text-base md:text-lg mb-6 md:mb-8 text-white/80 leading-relaxed px-4">
+        Whether you're looking to transform your recruitment process outsourcing strategy or accelerate your IT career with proven career support services, Novotion is here to help you succeed.
+      </p>
+      
+      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-8 px-4">
+        <Link href="/contact" className="w-full sm:w-auto">
+          <Button 
+            size="lg" 
+            className="group bg-white text-foreground hover:bg-gray-100 px-4 md:px-6 py-3 text-sm md:text-base font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto"
+          >
+            Schedule a Consultation
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </Link>
+
+        <Link href="/services/career-support" className="w-full sm:w-auto">
+          <Button
+            size="lg"
+            variant="outline"
+            className="group border-2 border-white text-white bg-transparent hover:bg-white/10 hover:border-white px-4 md:px-6 py-3 text-sm md:text-base font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 transform hover:-translate-y-1 shadow-md w-full sm:w-auto"
+          >
+            Get Started Today
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </Link>
+      </div>
+
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 text-white/80 px-4">
+        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+          <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-secondary" />
+          <span className="text-xs md:text-sm font-medium">No hidden fees</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+          <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-secondary" />
+          <span className="text-xs md:text-sm font-medium">24/7 Global Support</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+          <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-secondary" />
+          <span className="text-xs md:text-sm font-medium">Proven Results</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> */}
+
+<section className="py-12 md:py-20 lg:min-h-[80vh] flex items-center bg-primary text-white relative overflow-hidden">
+  <div className="absolute inset-0">
+    <div className="absolute top-0 left-0 w-48 h-48 md:w-72 md:h-72 bg-white/10 rounded-full mix-blend-soft-light filter blur-3xl animate-float"></div>
+    <div className="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-secondary/20 rounded-full mix-blend-soft-light filter blur-3xl animate-float-delayed"></div>
+  </div>
+  
+  <div className="relative container mx-auto px-4 md:px-6 py-8 md:py-16 text-center">
+    <div className="max-w-3xl mx-auto">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">
+        Ready to Make Your
+        <span className="block text-secondary mt-1 md:mt-2">
+          Next Move?
+        </span>
+      </h2>
+      
+      <p className="text-base md:text-lg mb-6 md:mb-8 text-white/80 leading-relaxed px-4">
+        Whether you're looking to transform your recruitment process outsourcing strategy or accelerate your IT career with proven career support services, Novotion is here to help you succeed.
+      </p>
+      
+      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-8 px-4">
+        <Link href="/contact" className="w-full sm:w-auto">
+          <Button 
+            size="lg" 
+            className="group bg-white text-foreground hover:bg-gray-100 px-4 md:px-6 py-3 text-sm md:text-base font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto"
+          >
+            Schedule a Consultation
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </Link>
+
+        <Link href="/services/career-support" className="w-full sm:w-auto">
+          <Button
+            size="lg"
+            className="group border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary px-4 md:px-6 py-3 text-sm md:text-base font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 transform hover:-translate-y-1 shadow-md w-full sm:w-auto"
+          >
+            Get Started Today
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </Link>
+      </div>
+
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 text-white/80 px-4">
+        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+          <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-secondary" />
+          <span className="text-xs md:text-sm font-medium">No hidden fees</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+          <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-secondary" />
+          <span className="text-xs md:text-sm font-medium">24/7 Global Support</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+          <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-secondary" />
+          <span className="text-xs md:text-sm font-medium">Proven Results</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <Footer />
       
