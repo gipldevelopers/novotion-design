@@ -2416,7 +2416,7 @@ const HeroSection = () => {
               <span className="text-xs sm:text-sm font-medium text-primary">
                 Trusted by 500+ Organizations Worldwide
               </span>
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+              {/* <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-primary" /> */}
             </motion.div>
 
             {/* Subtitle */}
