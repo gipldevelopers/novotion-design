@@ -1617,7 +1617,7 @@ const ServicesCareer = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="#services" className="w-full sm:w-auto">
+              <Link href="/contact#contact-form" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
                   variant="outline"

@@ -1306,7 +1306,7 @@ const TestimonialsSection = () => {
   const currentSlide = Math.floor(currentIndex / visibleCount);
 
   return (
-    <section className="min-h-[70vh] flex items-center bg-gradient-to-br from-slate-50 to-blue-50/30 relative py-16 overflow-hidden">
+    <section id='testimonials' className="min-h-[70vh] flex items-center bg-gradient-to-br from-slate-50 to-blue-50/30 relative py-16 overflow-hidden">
       
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">

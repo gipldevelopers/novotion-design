@@ -2796,7 +2796,7 @@ const About = () => {
       </section>
 
       {/* Enhanced Journey Timeline */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-slate-50/50 to-blue-50/50">
+      <section id="our-journey" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-slate-50/50 to-blue-50/50">
         <div className="container mx-auto px-4 sm:px-6 relative">
           <div className="text-center mb-8 sm:mb-12 animate-on-scroll">
             <div className="inline-flex items-center gap-2 font-semibold text-sm uppercase tracking-wider text-blue-600 mb-4">
@@ -2863,7 +2863,7 @@ const About = () => {
           <div className="text-center mb-8 sm:mb-12 animate-on-scroll">
             <div className="inline-flex items-center gap-2 font-semibold text-sm uppercase tracking-wider text-blue-600 mb-4">
               <div className="w-2 h-2 rounded-full bg-blue-600"></div>
-              Our Foundation
+              Our Core Value
             </div>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Core Values That
