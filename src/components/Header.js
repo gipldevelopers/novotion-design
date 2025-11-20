@@ -264,7 +264,7 @@ const Header = () => {
             <div className="relative">
               <div className="w-50 h-50 bg-transparent rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/logo/novotion.png"
+                  src="/logo/novotion_01.svg"
                   alt="Novotion Logo"
                   width={80}
                   height={80}
