@@ -438,7 +438,7 @@ const HeroSection = () => {
       subtitle: "Recruitment Excellence",
       description: "Our recruitment solutions blend industry insight, advanced sourcing methods, and transparent reporting to deliver measurable hiring impact across UK & USA markets.",
       button1Text: "Explore How We Work",
-      button1Link: "/services",
+      button1Link: "/services/rpo",
       button2Text: "Advance Your Career",
       button2Link: "/services/career-support",
       features: [
