@@ -568,8 +568,8 @@ const ServicesSection = () => {
           </div>
 
           <h2 className="text-2xl md:4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Strategic Solutions
-            <span className="block text-primary">For Your Success</span>
+            Two Specialized Service Lines,
+            <span className="block text-primary mt-3">One Unified Mission</span>
           </h2>
 
           <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">

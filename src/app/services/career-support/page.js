@@ -1597,7 +1597,7 @@ const ServicesCareer = () => {
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-2">
                 <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                  Stop Waiting, Start Connecting
+                  Stop waiting, Start connecting
                 </span>
               </h1>
 
@@ -1671,7 +1671,7 @@ const ServicesCareer = () => {
                 We are a proactive career marketing and placement partner dedicated exclusively to the U.S. IT contract market.
               </p>
               <p className="text-base sm:text-lg leading-relaxed">
-                Think of us as your strategic career agent. We leverage your unique strengths and our strong U.S. client and vendor network to create the right opportunities through reliable talent outreach strategies.
+                Think of us as your strategic partner. We leverage your unique strengths and our strong U.S. client and vendor network to create the right opportunities through reliable talent outreach strategies.
               </p>
               <p className="text-base sm:text-lg font-semibold text-gray-900 leading-relaxed">
                 From polishing your professional brand and marketing your profile to coordinating interviews and negotiating contracts - we handle the entire career support process. Our mission? Turn your downtime into your next great IT opportunity.

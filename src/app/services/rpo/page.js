@@ -1938,7 +1938,8 @@ const ServicesRPO = () => {
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Industries We Serve</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              Our specialized recruitment teams have deep talent acquisition expertise across multiple sectors
+              {/* Our specialized recruitment teams have deep talent acquisition expertise across multiple sectors */}
+              Specialized Recruitment Across 15+ Industry Verticals in the U.S.A and U.K.
             </p>
           </div>
           <div className="max-w-4xl mx-auto">

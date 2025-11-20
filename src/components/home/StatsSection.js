@@ -530,7 +530,7 @@ const StatsSection = () => {
       description: 'For RPO services since 2021'
     },
     { 
-      value: '10,000+', 
+      value: '5,000+', 
       label: 'Professionals Placed', 
       delay: '200',
       icon: Users,
