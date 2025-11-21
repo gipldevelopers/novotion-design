@@ -208,7 +208,7 @@ const Header = () => {
                 <span>+1 (786) 652-3950</span>
               </div>
 
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <Link href="/contact#contact-form" onClick={() => setIsOpen(false)}>
                 <Button className="btn-primary w-full py-3 font-medium rounded-lg">
                   Get Started
                 </Button>
