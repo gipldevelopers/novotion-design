@@ -932,6 +932,7 @@ import {
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import TopicSuggestionForm from '@/components/blog/TopicSuggestionForm';
 
 // Enhanced Card components
 const Card = ({ children, className = "", ...props }) => (
@@ -967,6 +968,7 @@ const Blog = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [visiblePosts, setVisiblePosts] = useState(6);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isTopicFormOpen, setIsTopicFormOpen] = useState(false);
   
   const observerRef = useRef(null);
   const allArticlesRef = useRef(null);
@@ -1684,7 +1686,7 @@ const Blog = () => {
       </section>
 
       {/* Topic Suggestion CTA */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      {/* <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center animate-on-scroll">
             <Card className="border border-blue-200 bg-white/50 backdrop-blur-sm">
@@ -1708,7 +1710,40 @@ const Blog = () => {
             </Card>
           </div>
         </div>
+      </section> */}
+      {/* Topic Suggestion CTA */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto text-center animate-on-scroll">
+            <Card className="border border-blue-200 bg-white/50 backdrop-blur-sm">
+              <CardContent className="py-8 sm:py-12">
+                <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full mb-6">
+                  <Lightbulb className="h-4 w-4" />
+                  <span className="font-semibold text-sm">Share Your Ideas</span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">
+                  Have a Topic You'd Like Us to Cover?
+                </h2>
+                <p className="text-gray-600 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+                  We're always looking for fresh perspectives on recruitment, RPO services, and career support. Let us know what you'd like to learn more about.
+                </p>
+                <Button 
+                  onClick={() => setIsTopicFormOpen(true)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-sm"
+                >
+                  Suggest a Topic
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </section>
+
+      <TopicSuggestionForm 
+        isOpen={isTopicFormOpen}
+        onClose={() => setIsTopicFormOpen(false)}
+      />
+
 
       <Footer />
 
